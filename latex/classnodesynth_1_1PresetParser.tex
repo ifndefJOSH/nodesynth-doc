@@ -1,0 +1,56 @@
+\hypertarget{classnodesynth_1_1PresetParser}{}\doxysection{nodesynth\+::Preset\+Parser Class Reference}
+\label{classnodesynth_1_1PresetParser}\index{nodesynth::PresetParser@{nodesynth::PresetParser}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnodesynth_1_1PresetParser_a53d90ac5f2238eda127ba0a1da1aa8a2}\label{classnodesynth_1_1PresetParser_a53d90ac5f2238eda127ba0a1da1aa8a2}} 
+{\bfseries Preset\+Parser} (\mbox{\hyperlink{classnodesynth_1_1NodeGraph}{Node\+Graph}} $\ast$graph)
+\item 
+void \mbox{\hyperlink{classnodesynth_1_1PresetParser_a7a234850eac2d119701962055012be40}{parse}} (std\+::string filename)
+\item 
+void \mbox{\hyperlink{classnodesynth_1_1PresetParser_af85a97bd8f7762a9594d7488ce99e77f}{deparse}} (std\+::string filename)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnodesynth_1_1PresetParser_a719f39c08b59095e2c453287106b1391}\label{classnodesynth_1_1PresetParser_a719f39c08b59095e2c453287106b1391}} 
+void {\bfseries parse\+Node} ()
+\item 
+\mbox{\Hypertarget{classnodesynth_1_1PresetParser_a29501880600a3377029f3b5595109d7c}\label{classnodesynth_1_1PresetParser_a29501880600a3377029f3b5595109d7c}} 
+void {\bfseries deparse\+Node} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classnodesynth_1_1PresetParser_af85a97bd8f7762a9594d7488ce99e77f}\label{classnodesynth_1_1PresetParser_af85a97bd8f7762a9594d7488ce99e77f}} 
+\index{nodesynth::PresetParser@{nodesynth::PresetParser}!deparse@{deparse}}
+\index{deparse@{deparse}!nodesynth::PresetParser@{nodesynth::PresetParser}}
+\doxysubsubsection{\texorpdfstring{deparse()}{deparse()}}
+{\footnotesize\ttfamily void Preset\+Parser\+::deparse (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+\char`\"{}\+Deparses\char`\"{} (aka writes from existing state) from the existing node graph
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The file to write to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classnodesynth_1_1PresetParser_a7a234850eac2d119701962055012be40}\label{classnodesynth_1_1PresetParser_a7a234850eac2d119701962055012be40}} 
+\index{nodesynth::PresetParser@{nodesynth::PresetParser}!parse@{parse}}
+\index{parse@{parse}!nodesynth::PresetParser@{nodesynth::PresetParser}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily void Preset\+Parser\+::parse (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+Parses the file at {\ttfamily filename} and adds it into the parent node graph
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The file to parse \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/core/Preset\+Parser.\+h\item 
+src/core/Preset\+Parser.\+cpp\end{DoxyCompactItemize}

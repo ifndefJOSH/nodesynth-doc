@@ -1,0 +1,106 @@
+\hypertarget{classnodesynth_1_1OscillatorNode}{}\doxysection{nodesynth\+::Oscillator\+Node Class Reference}
+\label{classnodesynth_1_1OscillatorNode}\index{nodesynth::OscillatorNode@{nodesynth::OscillatorNode}}
+Inheritance diagram for nodesynth\+::Oscillator\+Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.466960cm]{classnodesynth_1_1OscillatorNode}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnodesynth_1_1OscillatorNode_a37def7faf4b73140a010b28ea7ea07e0}\label{classnodesynth_1_1OscillatorNode_a37def7faf4b73140a010b28ea7ea07e0}} 
+{\bfseries Oscillator\+Node} (std\+::string name)
+\item 
+virtual void \mbox{\hyperlink{classnodesynth_1_1OscillatorNode_a014338fae9f35153a11fb614528a0953}{connect}} (\mbox{\hyperlink{classnodesynth_1_1DataStream}{Data\+Stream}} $\ast$ds, uint8\+\_\+t port)
+\item 
+virtual void \mbox{\hyperlink{classnodesynth_1_1OscillatorNode_afd61feb591587d5d480a4a38342f0a29}{disconnect}} (uint8\+\_\+t port)
+\item 
+virtual void \mbox{\hyperlink{classnodesynth_1_1OscillatorNode_a51519cebae72c614b366be1155194e1a}{initialize\+Ports}} ()
+\item 
+virtual void \mbox{\hyperlink{classnodesynth_1_1OscillatorNode_ad82d287746331a24226954699f495989}{update}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnodesynth_1_1OscillatorNode_a6c8fda8da70f713aae95e1d54df5abc2}\label{classnodesynth_1_1OscillatorNode_a6c8fda8da70f713aae95e1d54df5abc2}} 
+static double {\bfseries frequency\+From\+Midi\+Note} (uint8\+\_\+t midi\+Note)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnodesynth_1_1OscillatorNode_a057089b1f949e445c31eba5fc0e21e10}\label{classnodesynth_1_1OscillatorNode_a057089b1f949e445c31eba5fc0e21e10}} 
+\mbox{\hyperlink{classnodesynth_1_1ChanneledAudioDataStream}{Channeled\+Audio\+Data\+Stream}} {\bfseries out}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnodesynth_1_1OscillatorNode_af0f2f52e6408384a34fe210b38df8176}\label{classnodesynth_1_1OscillatorNode_af0f2f52e6408384a34fe210b38df8176}} 
+\mbox{\hyperlink{classnodesynth_1_1MidiStream}{Midi\+Stream}} $\ast$ {\bfseries notes\+In}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classnodesynth_1_1OscillatorNode_a014338fae9f35153a11fb614528a0953}\label{classnodesynth_1_1OscillatorNode_a014338fae9f35153a11fb614528a0953}} 
+\index{nodesynth::OscillatorNode@{nodesynth::OscillatorNode}!connect@{connect}}
+\index{connect@{connect}!nodesynth::OscillatorNode@{nodesynth::OscillatorNode}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily void Oscillator\+Node\+::connect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnodesynth_1_1DataStream}{Data\+Stream}} $\ast$}]{ds,  }\item[{uint8\+\_\+t}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Connects a \mbox{\hyperlink{classnodesynth_1_1Node}{Node}}\textquotesingle{}s output to our certain \mbox{\hyperlink{classnodesynth_1_1Node}{Node}}\textquotesingle{}s input at port number port
+
+
+\begin{DoxyParams}{Parameters}
+{\em ds} & The datastream to connect to \\
+\hline
+{\em port} & The port to connect it to \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classnodesynth_1_1Node_ae3dec01601b59a48f65864e02814a1f9}{nodesynth\+::\+Node}}.
+
+\mbox{\Hypertarget{classnodesynth_1_1OscillatorNode_afd61feb591587d5d480a4a38342f0a29}\label{classnodesynth_1_1OscillatorNode_afd61feb591587d5d480a4a38342f0a29}} 
+\index{nodesynth::OscillatorNode@{nodesynth::OscillatorNode}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!nodesynth::OscillatorNode@{nodesynth::OscillatorNode}}
+\doxysubsubsection{\texorpdfstring{disconnect()}{disconnect()}}
+{\footnotesize\ttfamily void Oscillator\+Node\+::disconnect (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Disconnects a port
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The port to disconnect \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classnodesynth_1_1Node_a4d5e5a3e58c7b4453bd2a2d398658ec1}{nodesynth\+::\+Node}}.
+
+\mbox{\Hypertarget{classnodesynth_1_1OscillatorNode_a51519cebae72c614b366be1155194e1a}\label{classnodesynth_1_1OscillatorNode_a51519cebae72c614b366be1155194e1a}} 
+\index{nodesynth::OscillatorNode@{nodesynth::OscillatorNode}!initializePorts@{initializePorts}}
+\index{initializePorts@{initializePorts}!nodesynth::OscillatorNode@{nodesynth::OscillatorNode}}
+\doxysubsubsection{\texorpdfstring{initializePorts()}{initializePorts()}}
+{\footnotesize\ttfamily void Oscillator\+Node\+::initialize\+Ports (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classnodesynth_1_1Node}{nodesynth\+::\+Node}}.
+
+\mbox{\Hypertarget{classnodesynth_1_1OscillatorNode_ad82d287746331a24226954699f495989}\label{classnodesynth_1_1OscillatorNode_ad82d287746331a24226954699f495989}} 
+\index{nodesynth::OscillatorNode@{nodesynth::OscillatorNode}!update@{update}}
+\index{update@{update}!nodesynth::OscillatorNode@{nodesynth::OscillatorNode}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void nodesynth\+::\+Oscillator\+Node\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classnodesynth_1_1Node}{nodesynth\+::\+Node}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/node/Oscillator\+Node.\+h\item 
+src/node/Oscillator\+Node.\+cpp\end{DoxyCompactItemize}

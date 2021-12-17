@@ -1,0 +1,153 @@
+\hypertarget{classnodesynth_1_1Options}{}\doxysection{nodesynth\+::Options Class Reference}
+\label{classnodesynth_1_1Options}\index{nodesynth::Options@{nodesynth::Options}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classnodesynth_1_1Options_a1e1bfb95368c894cdbbb34ae8d4c457e}{initialize}} (uint64\+\_\+t n\+Sample\+Rate, uint64\+\_\+t n\+Buffer\+Size, uint8\+\_\+t n\+Midi\+Channel\+Count)
+\item 
+static std\+::chrono\+::duration$<$ double $>$ \mbox{\hyperlink{classnodesynth_1_1Options_a7ca3beef9d5679530785af17bad5975f}{get\+Elapsed\+Time}} ()
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{classnodesynth_1_1Options_ace817516b640e182c63f58481cad44ab}{get\+Sample\+Rate}} ()
+\item 
+static uint64\+\_\+t \mbox{\hyperlink{classnodesynth_1_1Options_aa6d2aee489b87ed4ab4cc27462042a04}{get\+Buffer\+Size}} ()
+\item 
+static uint8\+\_\+t \mbox{\hyperlink{classnodesynth_1_1Options_a7e39e8d1cc3cfb98a377b3147a152a93}{get\+Midi\+Channel\+Count}} ()
+\item 
+static bool \mbox{\hyperlink{classnodesynth_1_1Options_aed99a34a3e72690079861f8159a87271}{get\+Verbose}} ()
+\item 
+static void \mbox{\hyperlink{classnodesynth_1_1Options_a8b79905c7adfdf577c3458e8e87f7cb5}{set\+Verbose}} (bool vb)
+\item 
+static bool \mbox{\hyperlink{classnodesynth_1_1Options_a7da676c9581db5dec102a2071ee0f5f8}{get\+Silent}} ()
+\item 
+static void \mbox{\hyperlink{classnodesynth_1_1Options_adf7f3cdf7ffd51a3b2baf11e54261b55}{set\+Silent}} (bool sl)
+\item 
+static void \mbox{\hyperlink{classnodesynth_1_1Options_a010ac85dbea1f1bba670014ac2319268}{check\+All\+Options}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnodesynth_1_1Options_aa6ca3b13ff7561ca198b921644ae8612}\label{classnodesynth_1_1Options_aa6ca3b13ff7561ca198b921644ae8612}} 
+static const uint8\+\_\+t {\bfseries MAX\+\_\+\+MIDI\+\_\+\+CHANNELS} = 32
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classnodesynth_1_1Options_a010ac85dbea1f1bba670014ac2319268}\label{classnodesynth_1_1Options_a010ac85dbea1f1bba670014ac2319268}} 
+\index{nodesynth::Options@{nodesynth::Options}!checkAllOptions@{checkAllOptions}}
+\index{checkAllOptions@{checkAllOptions}!nodesynth::Options@{nodesynth::Options}}
+\doxysubsubsection{\texorpdfstring{checkAllOptions()}{checkAllOptions()}}
+{\footnotesize\ttfamily void Options\+::check\+All\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Checks the validity of all of the options that we have. \mbox{\Hypertarget{classnodesynth_1_1Options_aa6d2aee489b87ed4ab4cc27462042a04}\label{classnodesynth_1_1Options_aa6d2aee489b87ed4ab4cc27462042a04}} 
+\index{nodesynth::Options@{nodesynth::Options}!getBufferSize@{getBufferSize}}
+\index{getBufferSize@{getBufferSize}!nodesynth::Options@{nodesynth::Options}}
+\doxysubsubsection{\texorpdfstring{getBufferSize()}{getBufferSize()}}
+{\footnotesize\ttfamily uint64\+\_\+t Options\+::get\+Buffer\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Gets the buffer size (N) that we\textquotesingle{}re using in our datastreams. In reality 2N buffer size is allocated since we\textquotesingle{}re using triangular windowing.
+
+\begin{DoxyReturn}{Returns}
+Our buffer size. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnodesynth_1_1Options_a7ca3beef9d5679530785af17bad5975f}\label{classnodesynth_1_1Options_a7ca3beef9d5679530785af17bad5975f}} 
+\index{nodesynth::Options@{nodesynth::Options}!getElapsedTime@{getElapsedTime}}
+\index{getElapsedTime@{getElapsedTime}!nodesynth::Options@{nodesynth::Options}}
+\doxysubsubsection{\texorpdfstring{getElapsedTime()}{getElapsedTime()}}
+{\footnotesize\ttfamily std\+::chrono\+::duration$<$ double $>$ Options\+::get\+Elapsed\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns the elapsed time since initialization
+
+\begin{DoxyReturn}{Returns}
+Elapsed time since \mbox{\hyperlink{classnodesynth_1_1Options_a1e1bfb95368c894cdbbb34ae8d4c457e}{initialize()}} was called (ideally at program start 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnodesynth_1_1Options_a7e39e8d1cc3cfb98a377b3147a152a93}\label{classnodesynth_1_1Options_a7e39e8d1cc3cfb98a377b3147a152a93}} 
+\index{nodesynth::Options@{nodesynth::Options}!getMidiChannelCount@{getMidiChannelCount}}
+\index{getMidiChannelCount@{getMidiChannelCount}!nodesynth::Options@{nodesynth::Options}}
+\doxysubsubsection{\texorpdfstring{getMidiChannelCount()}{getMidiChannelCount()}}
+{\footnotesize\ttfamily uint8\+\_\+t Options\+::get\+Midi\+Channel\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Gets the number of MIDI channels we are using. Our eviction scheme for MIDI channels is always LRU (least recently used).
+
+\begin{DoxyReturn}{Returns}
+Number of MIDI channels used. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnodesynth_1_1Options_ace817516b640e182c63f58481cad44ab}\label{classnodesynth_1_1Options_ace817516b640e182c63f58481cad44ab}} 
+\index{nodesynth::Options@{nodesynth::Options}!getSampleRate@{getSampleRate}}
+\index{getSampleRate@{getSampleRate}!nodesynth::Options@{nodesynth::Options}}
+\doxysubsubsection{\texorpdfstring{getSampleRate()}{getSampleRate()}}
+{\footnotesize\ttfamily uint64\+\_\+t Options\+::get\+Sample\+Rate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Gets the sampling rate that we are operating at.
+
+\begin{DoxyReturn}{Returns}
+The sampling rate of our JACK host or DAW. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnodesynth_1_1Options_a7da676c9581db5dec102a2071ee0f5f8}\label{classnodesynth_1_1Options_a7da676c9581db5dec102a2071ee0f5f8}} 
+\index{nodesynth::Options@{nodesynth::Options}!getSilent@{getSilent}}
+\index{getSilent@{getSilent}!nodesynth::Options@{nodesynth::Options}}
+\doxysubsubsection{\texorpdfstring{getSilent()}{getSilent()}}
+{\footnotesize\ttfamily bool Options\+::get\+Silent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Gets wheter or not we are not to print {\itshape any} messages. Note that this takes precedence over verbose.
+
+\begin{DoxyReturn}{Returns}
+Whether we do NOT print any messages. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnodesynth_1_1Options_aed99a34a3e72690079861f8159a87271}\label{classnodesynth_1_1Options_aed99a34a3e72690079861f8159a87271}} 
+\index{nodesynth::Options@{nodesynth::Options}!getVerbose@{getVerbose}}
+\index{getVerbose@{getVerbose}!nodesynth::Options@{nodesynth::Options}}
+\doxysubsubsection{\texorpdfstring{getVerbose()}{getVerbose()}}
+{\footnotesize\ttfamily bool Options\+::get\+Verbose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Gets whether or not we are printing verbose error and info messages. Note that silent takes precedence over verbose.
+
+\begin{DoxyReturn}{Returns}
+Whether verbose error messages printed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnodesynth_1_1Options_a1e1bfb95368c894cdbbb34ae8d4c457e}\label{classnodesynth_1_1Options_a1e1bfb95368c894cdbbb34ae8d4c457e}} 
+\index{nodesynth::Options@{nodesynth::Options}!initialize@{initialize}}
+\index{initialize@{initialize}!nodesynth::Options@{nodesynth::Options}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void Options\+::initialize (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{n\+Sample\+Rate,  }\item[{uint64\+\_\+t}]{n\+Buffer\+Size,  }\item[{uint8\+\_\+t}]{n\+Midi\+Channel\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Initializes everything in this static class.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+Sample\+Rate} & The sample rate for nodesynth to use \\
+\hline
+{\em n\+Buffer\+Size} & The buffer size it uses \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classnodesynth_1_1Options_adf7f3cdf7ffd51a3b2baf11e54261b55}\label{classnodesynth_1_1Options_adf7f3cdf7ffd51a3b2baf11e54261b55}} 
+\index{nodesynth::Options@{nodesynth::Options}!setSilent@{setSilent}}
+\index{setSilent@{setSilent}!nodesynth::Options@{nodesynth::Options}}
+\doxysubsubsection{\texorpdfstring{setSilent()}{setSilent()}}
+{\footnotesize\ttfamily void Options\+::set\+Silent (\begin{DoxyParamCaption}\item[{bool}]{sl }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Sets whether or not we are going to be completely silent with info and error messages. Note that this takes precedence over verbose.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sl} & Whether or not this should be silent. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classnodesynth_1_1Options_a8b79905c7adfdf577c3458e8e87f7cb5}\label{classnodesynth_1_1Options_a8b79905c7adfdf577c3458e8e87f7cb5}} 
+\index{nodesynth::Options@{nodesynth::Options}!setVerbose@{setVerbose}}
+\index{setVerbose@{setVerbose}!nodesynth::Options@{nodesynth::Options}}
+\doxysubsubsection{\texorpdfstring{setVerbose()}{setVerbose()}}
+{\footnotesize\ttfamily void Options\+::set\+Verbose (\begin{DoxyParamCaption}\item[{bool}]{vb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Sets whether or not to use verbose error and info messages. Note that silent takes precedence over verbose.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vb} & Whether or not to be verbose. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/core/Options.\+h\item 
+src/core/Options.\+cpp\end{DoxyCompactItemize}

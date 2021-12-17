@@ -1,0 +1,71 @@
+\hypertarget{NodeSynth_8h_source}{}\doxysection{Node\+Synth.\+h}
+\label{NodeSynth_8h_source}\index{src/core/NodeSynth.h@{src/core/NodeSynth.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef NODESYNTH\_H\_INCLUDED}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define NODESYNTH\_H\_INCLUDED}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}Options.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}PresetParser.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}NodeGraph.h"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#ifdef NODESYNTH\_JACK\_COMPILE}}
+\DoxyCodeLine{11 \textcolor{comment}{// Include headers necessary for JACK compilation}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <jack/jack.h>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <jack/control.h>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <jack/session.h>}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// NODESYNTH\_JACK\_COMPILE}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#ifdef NODESYNTH\_LV2\_COMPILE}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}lv2/core/lv2.h"{}}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// NODESYNTH\_LV2\_COMPILE}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#ifdef NODESYNTH\_VST3\_COMPILE}}
+\DoxyCodeLine{23 \textcolor{comment}{// TODO: Add headers for VST3 compile}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#ifdef NODESYNTH\_STANDALONE\_COMPILE}}
+\DoxyCodeLine{27 \textcolor{comment}{// TODO: Add jeaders for standalone compile}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// NODESYNTH\_STANDALONE\_COMPILE}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacenodesynth}{nodesynth}} \{}
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#ifdef NODESYNTH\_JACK\_COMPILE}}
+\DoxyCodeLine{32     \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{33         jack\_port\_t * input\_port;}
+\DoxyCodeLine{34         jack\_port\_t * output\_port\_left;}
+\DoxyCodeLine{35         jack\_port\_t * output\_port\_right;}
+\DoxyCodeLine{36     \} \mbox{\hyperlink{structnodesynth_1_1port__pair__t}{port\_pair\_t}};}
+\DoxyCodeLine{40     \textcolor{keywordtype}{int} \mbox{\hyperlink{namespacenodesynth_a0618d7533dc3b5c96199ef59678b2dce}{inprocess}}(jack\_nframes\_t nframes, \mbox{\hyperlink{structnodesynth_1_1port__pair__t}{port\_pair\_t}} * arg);}
+\DoxyCodeLine{44     \textcolor{keywordtype}{int} \mbox{\hyperlink{namespacenodesynth_a6b821c7c9c9b54421ce2da28cf18173b}{jack\_initialize}}(jack\_client\_t * client, \textcolor{keyword}{const} \textcolor{keywordtype}{char} * load\_init);}
+\DoxyCodeLine{48     \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacenodesynth_ae6a428ba5298861ff68fc4ffa7128b1a}{jack\_finish}}(\mbox{\hyperlink{structnodesynth_1_1port__pair__t}{port\_pair\_t}} * arg);}
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// NODESYNTH\_JACK\_COMPILE}}
+\DoxyCodeLine{50     \textcolor{keyword}{class }\mbox{\hyperlink{classnodesynth_1_1NodeSynth}{NodeSynth}} \{}
+\DoxyCodeLine{51     \textcolor{keyword}{public}:}
+\DoxyCodeLine{52         \textcolor{comment}{// Constructor and destructor are not used}}
+\DoxyCodeLine{53         \mbox{\hyperlink{classnodesynth_1_1NodeSynth}{NodeSynth}}();}
+\DoxyCodeLine{54         \mbox{\hyperlink{classnodesynth_1_1NodeSynth}{\string~NodeSynth}}();}
+\DoxyCodeLine{55         \textcolor{comment}{// Most methods are static}}
+\DoxyCodeLine{56         \textcolor{keyword}{static} \textcolor{keywordtype}{void} init();}
+\DoxyCodeLine{57         \textcolor{keyword}{static} \textcolor{keywordtype}{void} finish();}
+\DoxyCodeLine{58         \textcolor{keyword}{static} \textcolor{keywordtype}{void} startWorkerThread();}
+\DoxyCodeLine{59         \textcolor{keyword}{static} \textcolor{keywordtype}{void} readPresetFile(std::string file);}
+\DoxyCodeLine{60         \textcolor{keyword}{static} \textcolor{keywordtype}{void} writePresetFile(std::string file);}
+\DoxyCodeLine{61         \textcolor{keyword}{static} \textcolor{keywordtype}{void} setOptions();}
+\DoxyCodeLine{62         \textcolor{keyword}{inline} \textcolor{keyword}{static} \mbox{\hyperlink{classnodesynth_1_1NodeGraph}{NodeGraph}} * graph;}
+\DoxyCodeLine{63 \textcolor{preprocessor}{\#ifdef NODESYNTH\_JACK\_COMPILE}}
+\DoxyCodeLine{64         \textcolor{keyword}{static} \textcolor{keywordtype}{void} setClient(jack\_client\_t * clientCurrent\_n);}
+\DoxyCodeLine{65     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{66         \textcolor{keyword}{inline} \textcolor{keyword}{static} jack\_client\_t * clientCurrent;}
+\DoxyCodeLine{67 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// NODESYNTH\_JACK\_COMPILE}}
+\DoxyCodeLine{68     \textcolor{keyword}{private}:}
+\DoxyCodeLine{69         \textcolor{keyword}{inline} \textcolor{keyword}{static} \mbox{\hyperlink{classnodesynth_1_1PresetParser}{PresetParser}} * parser;}
+\DoxyCodeLine{70     \};}
+\DoxyCodeLine{71 \} \textcolor{comment}{// nodesynth}}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// NODESYNTH\_H\_INCLUDED}}
+
+\end{DoxyCode}

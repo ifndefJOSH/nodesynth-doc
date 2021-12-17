@@ -1,0 +1,41 @@
+\hypertarget{Options_8h_source}{}\doxysection{Options.\+h}
+\label{Options_8h_source}\index{src/core/Options.h@{src/core/Options.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef OPTIONS\_H\_INCLUDED}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define OPTIONS\_H\_INCLUDED}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <chrono>}   \textcolor{comment}{// For elapsed time}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <cstdint>}  \textcolor{comment}{// For sampling rate and buffer size}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#define NODESYNTH\_JACK\_COMPILE}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacenodesynth}{nodesynth}} \{}
+\DoxyCodeLine{10     \textcolor{keyword}{class }\mbox{\hyperlink{classnodesynth_1_1Options}{Options}} \{}
+\DoxyCodeLine{11     \textcolor{keyword}{public}:}
+\DoxyCodeLine{18         \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classnodesynth_1_1Options_a1e1bfb95368c894cdbbb34ae8d4c457e}{initialize}}(uint64\_t nSampleRate, uint64\_t nBufferSize, uint8\_t nMidiChannelCount);}
+\DoxyCodeLine{24         \textcolor{keyword}{static} std::chrono::duration<double> \mbox{\hyperlink{classnodesynth_1_1Options_a7ca3beef9d5679530785af17bad5975f}{getElapsedTime}}();}
+\DoxyCodeLine{30         \textcolor{keyword}{static} uint64\_t \mbox{\hyperlink{classnodesynth_1_1Options_ace817516b640e182c63f58481cad44ab}{getSampleRate}}();}
+\DoxyCodeLine{37         \textcolor{keyword}{static} uint64\_t \mbox{\hyperlink{classnodesynth_1_1Options_aa6d2aee489b87ed4ab4cc27462042a04}{getBufferSize}}();}
+\DoxyCodeLine{44         \textcolor{keyword}{static} uint8\_t \mbox{\hyperlink{classnodesynth_1_1Options_a7e39e8d1cc3cfb98a377b3147a152a93}{getMidiChannelCount}}();}
+\DoxyCodeLine{51         \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classnodesynth_1_1Options_aed99a34a3e72690079861f8159a87271}{getVerbose}}();}
+\DoxyCodeLine{58         \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classnodesynth_1_1Options_a8b79905c7adfdf577c3458e8e87f7cb5}{setVerbose}}(\textcolor{keywordtype}{bool} vb);}
+\DoxyCodeLine{65         \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classnodesynth_1_1Options_a7da676c9581db5dec102a2071ee0f5f8}{getSilent}}();}
+\DoxyCodeLine{72         \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classnodesynth_1_1Options_adf7f3cdf7ffd51a3b2baf11e54261b55}{setSilent}}(\textcolor{keywordtype}{bool} sl);}
+\DoxyCodeLine{76         \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{classnodesynth_1_1Options_a010ac85dbea1f1bba670014ac2319268}{checkAllOptions}}();}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78         \textcolor{keyword}{static} \textcolor{keyword}{const} uint8\_t MAX\_MIDI\_CHANNELS = 32;}
+\DoxyCodeLine{79     \textcolor{keyword}{private}:}
+\DoxyCodeLine{80         \textcolor{keyword}{inline} \textcolor{keyword}{static} std::chrono::high\_resolution\_clock::time\_point startTime;}
+\DoxyCodeLine{81         \textcolor{keyword}{inline} \textcolor{keyword}{static} uint64\_t sampleRate;}
+\DoxyCodeLine{82         \textcolor{keyword}{inline} \textcolor{keyword}{static} uint64\_t bufferSize;}
+\DoxyCodeLine{83         \textcolor{keyword}{inline} \textcolor{keyword}{static} uint8\_t midiChannelCount;}
+\DoxyCodeLine{84         \textcolor{keyword}{inline} \textcolor{keyword}{static} \textcolor{keywordtype}{bool} verbose;}
+\DoxyCodeLine{85         \textcolor{keyword}{inline} \textcolor{keyword}{static} \textcolor{keywordtype}{bool} silent; \textcolor{comment}{// Silent takes priority over verbose}}
+\DoxyCodeLine{86         \textcolor{keyword}{inline} \textcolor{keyword}{static} \textcolor{keywordtype}{bool} initialized; \textcolor{comment}{// Only allow initialized once}}
+\DoxyCodeLine{87     \};}
+\DoxyCodeLine{88 \} \textcolor{comment}{// namespace nodesynth}}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// OPTIONS\_H\_INCLUDED}}
+
+\end{DoxyCode}

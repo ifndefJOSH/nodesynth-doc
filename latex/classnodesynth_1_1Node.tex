@@ -1,0 +1,116 @@
+\hypertarget{classnodesynth_1_1Node}{}\doxysection{nodesynth\+::Node Class Reference}
+\label{classnodesynth_1_1Node}\index{nodesynth::Node@{nodesynth::Node}}
+Inheritance diagram for nodesynth\+::Node\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=11.000000cm]{classnodesynth_1_1Node}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnodesynth_1_1Node_a7841d77ae58a6cc471c74bcd75a6543c}\label{classnodesynth_1_1Node_a7841d77ae58a6cc471c74bcd75a6543c}} 
+{\bfseries Node} (const std\+::string name)
+\item 
+\mbox{\Hypertarget{classnodesynth_1_1Node_ab512b479c3226570667bffac357b02d5}\label{classnodesynth_1_1Node_ab512b479c3226570667bffac357b02d5}} 
+void {\bfseries update\+Forward} ()
+\item 
+\mbox{\Hypertarget{classnodesynth_1_1Node_a313046ed622953742da2a6055379b9e4}\label{classnodesynth_1_1Node_a313046ed622953742da2a6055379b9e4}} 
+virtual void {\bfseries initialize\+Ports} ()=0
+\item 
+virtual void \mbox{\hyperlink{classnodesynth_1_1Node_a91e1275962cc62e6ca38437a8ba042e2}{update}} ()=0
+\item 
+\mbox{\Hypertarget{classnodesynth_1_1Node_a20c48dbd112e6c8a776314887050ebcb}\label{classnodesynth_1_1Node_a20c48dbd112e6c8a776314887050ebcb}} 
+const std\+::string {\bfseries get\+Name} ()
+\item 
+virtual void \mbox{\hyperlink{classnodesynth_1_1Node_ae3dec01601b59a48f65864e02814a1f9}{connect}} (\mbox{\hyperlink{classnodesynth_1_1DataStream}{Data\+Stream}} $\ast$ds, uint8\+\_\+t port)=0
+\item 
+virtual void \mbox{\hyperlink{classnodesynth_1_1Node_a4d5e5a3e58c7b4453bd2a2d398658ec1}{disconnect}} (uint8\+\_\+t port)=0
+\item 
+void \mbox{\hyperlink{classnodesynth_1_1Node_a20762c877a71bd8602887a55cfd98265}{update\+All\+Streams}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnodesynth_1_1Node_ae6eae4285bd27ec68ea0b499486dd118}\label{classnodesynth_1_1Node_ae6eae4285bd27ec68ea0b499486dd118}} 
+std\+::vector$<$ \mbox{\hyperlink{classnodesynth_1_1Node}{Node}} $\ast$ $>$ {\bfseries parents}
+\item 
+\mbox{\Hypertarget{classnodesynth_1_1Node_aa4c07b487be3cce297280f1b06f1686d}\label{classnodesynth_1_1Node_aa4c07b487be3cce297280f1b06f1686d}} 
+std\+::vector$<$ \mbox{\hyperlink{classnodesynth_1_1Node}{Node}} $\ast$ $>$ {\bfseries children}
+\item 
+\mbox{\Hypertarget{classnodesynth_1_1Node_a2f88585146de57d2887d77b2eed7c801}\label{classnodesynth_1_1Node_a2f88585146de57d2887d77b2eed7c801}} 
+uint8\+\_\+t {\bfseries num\+Children\+Since\+Last\+Update}
+\item 
+\mbox{\Hypertarget{classnodesynth_1_1Node_a1bc0b6d3fb798bb6c532dc5fcb3ba115}\label{classnodesynth_1_1Node_a1bc0b6d3fb798bb6c532dc5fcb3ba115}} 
+bool {\bfseries visited}
+\item 
+\mbox{\Hypertarget{classnodesynth_1_1Node_a109f511b7fe39f52ece22a099890b871}\label{classnodesynth_1_1Node_a109f511b7fe39f52ece22a099890b871}} 
+std\+::vector$<$ \mbox{\hyperlink{classnodesynth_1_1DataStream}{Data\+Stream}} $\ast$ $>$ {\bfseries streams}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnodesynth_1_1Node_adecd836796e925f9672da9f8b9973eba}\label{classnodesynth_1_1Node_adecd836796e925f9672da9f8b9973eba}} 
+void {\bfseries add\+Data\+Stream\+To\+Ports} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classnodesynth_1_1DataStream}{Data\+Stream}} $>$ ds)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classnodesynth_1_1Node_ae3dec01601b59a48f65864e02814a1f9}\label{classnodesynth_1_1Node_ae3dec01601b59a48f65864e02814a1f9}} 
+\index{nodesynth::Node@{nodesynth::Node}!connect@{connect}}
+\index{connect@{connect}!nodesynth::Node@{nodesynth::Node}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily virtual void nodesynth\+::\+Node\+::connect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnodesynth_1_1DataStream}{Data\+Stream}} $\ast$}]{ds,  }\item[{uint8\+\_\+t}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Connects a \mbox{\hyperlink{classnodesynth_1_1Node}{Node}}\textquotesingle{}s output to our certain \mbox{\hyperlink{classnodesynth_1_1Node}{Node}}\textquotesingle{}s input at port number port
+
+
+\begin{DoxyParams}{Parameters}
+{\em ds} & The datastream to connect to \\
+\hline
+{\em port} & The port to connect it to \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classnodesynth_1_1OscillatorNode_a014338fae9f35153a11fb614528a0953}{nodesynth\+::\+Oscillator\+Node}}.
+
+\mbox{\Hypertarget{classnodesynth_1_1Node_a4d5e5a3e58c7b4453bd2a2d398658ec1}\label{classnodesynth_1_1Node_a4d5e5a3e58c7b4453bd2a2d398658ec1}} 
+\index{nodesynth::Node@{nodesynth::Node}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!nodesynth::Node@{nodesynth::Node}}
+\doxysubsubsection{\texorpdfstring{disconnect()}{disconnect()}}
+{\footnotesize\ttfamily virtual void nodesynth\+::\+Node\+::disconnect (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Disconnects a port
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & The port to disconnect \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classnodesynth_1_1OscillatorNode_afd61feb591587d5d480a4a38342f0a29}{nodesynth\+::\+Oscillator\+Node}}.
+
+\mbox{\Hypertarget{classnodesynth_1_1Node_a91e1275962cc62e6ca38437a8ba042e2}\label{classnodesynth_1_1Node_a91e1275962cc62e6ca38437a8ba042e2}} 
+\index{nodesynth::Node@{nodesynth::Node}!update@{update}}
+\index{update@{update}!nodesynth::Node@{nodesynth::Node}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void nodesynth\+::\+Node\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classnodesynth_1_1AudioDechanneler_a0095b0e89c9ea20bf246c8f1100f62e4}{nodesynth\+::\+Audio\+Dechanneler}}.
+
+\mbox{\Hypertarget{classnodesynth_1_1Node_a20762c877a71bd8602887a55cfd98265}\label{classnodesynth_1_1Node_a20762c877a71bd8602887a55cfd98265}} 
+\index{nodesynth::Node@{nodesynth::Node}!updateAllStreams@{updateAllStreams}}
+\index{updateAllStreams@{updateAllStreams}!nodesynth::Node@{nodesynth::Node}}
+\doxysubsubsection{\texorpdfstring{updateAllStreams()}{updateAllStreams()}}
+{\footnotesize\ttfamily void Node\+::update\+All\+Streams (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Updates all of our datastreams 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/node/Node.\+h\item 
+src/node/Node.\+cpp\end{DoxyCompactItemize}

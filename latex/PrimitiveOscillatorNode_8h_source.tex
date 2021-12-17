@@ -1,0 +1,60 @@
+\hypertarget{PrimitiveOscillatorNode_8h_source}{}\doxysection{Primitive\+Oscillator\+Node.\+h}
+\label{PrimitiveOscillatorNode_8h_source}\index{src/node/PrimitiveOscillatorNode.h@{src/node/PrimitiveOscillatorNode.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#ifndef PRIMITIVEOSCILLATORNODE\_H\_INCLUDED}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#define PRIMITIVEOSCILLATORNODE\_H\_INCLUDED}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}OscillatorNode.h"{}}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{comment}{// According to https://fftw.org/fftw3\_doc/Complex-\/numbers.html, including}}
+\DoxyCodeLine{20 \textcolor{comment}{// <complex.h> BEFORE <fftw3.h> allows us to use the builtin C/++ complex}}
+\DoxyCodeLine{21 \textcolor{comment}{// type and overloaded operators}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include <complex>}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include <fftw3.h>}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacenodesynth}{nodesynth}} \{}
+\DoxyCodeLine{26     \textcolor{keyword}{typedef} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} waveform\_t;}
+\DoxyCodeLine{27     \textcolor{keyword}{enum} WAVEFORMS \{}
+\DoxyCodeLine{28         SAWTOOTH    = 0}
+\DoxyCodeLine{29         , SQUARE    = 1}
+\DoxyCodeLine{30         , SINE      = 2}
+\DoxyCodeLine{31         , TRIANGLE  = 3}
+\DoxyCodeLine{32     \};}
+\DoxyCodeLine{33      \textcolor{keyword}{class }\mbox{\hyperlink{classnodesynth_1_1PrimitiveOscillatorNode}{PrimitiveOscillatorNode}} : \mbox{\hyperlink{classnodesynth_1_1OscillatorNode}{OscillatorNode}} \{}
+\DoxyCodeLine{34     \textcolor{keyword}{public}:}
+\DoxyCodeLine{35         \mbox{\hyperlink{classnodesynth_1_1PrimitiveOscillatorNode}{PrimitiveOscillatorNode}}(std::string name);}
+\DoxyCodeLine{36         \mbox{\hyperlink{classnodesynth_1_1PrimitiveOscillatorNode}{\string~PrimitiveOscillatorNode}}();}
+\DoxyCodeLine{37     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{38         \textcolor{keywordtype}{void} createSawToothWave(}
+\DoxyCodeLine{39             \textcolor{keywordtype}{double} frequency}
+\DoxyCodeLine{40             , \textcolor{keywordtype}{double} velocity}
+\DoxyCodeLine{41             , uint8\_t channel}
+\DoxyCodeLine{42         );}
+\DoxyCodeLine{43         \textcolor{keywordtype}{void} createSquareWave(}
+\DoxyCodeLine{44             \textcolor{keywordtype}{double} frequency}
+\DoxyCodeLine{45             , \textcolor{keywordtype}{double} velocity}
+\DoxyCodeLine{46             , uint8\_t channel}
+\DoxyCodeLine{47         );}
+\DoxyCodeLine{48         \textcolor{keywordtype}{void} createSineWave(}
+\DoxyCodeLine{49             \textcolor{keywordtype}{double} frequency}
+\DoxyCodeLine{50             , \textcolor{keywordtype}{double} velocity}
+\DoxyCodeLine{51             , uint8\_t channel}
+\DoxyCodeLine{52         );}
+\DoxyCodeLine{53         \textcolor{keywordtype}{void} createTriangleWave(}
+\DoxyCodeLine{54             \textcolor{keywordtype}{double} frequency}
+\DoxyCodeLine{55             , \textcolor{keywordtype}{double} velocity}
+\DoxyCodeLine{56             , uint8\_t channel}
+\DoxyCodeLine{57         );}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} update();}
+\DoxyCodeLine{60     \textcolor{keyword}{private}:}
+\DoxyCodeLine{61         waveform\_t waveformType;}
+\DoxyCodeLine{62         fftw\_complex ** temporaryBuffers;}
+\DoxyCodeLine{63         fftw\_plan p;}
+\DoxyCodeLine{64     \};}
+\DoxyCodeLine{65 \} \textcolor{comment}{// namespace nodesynth}}
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// PRIMITIVEOSCILLATORNODE\_H\_INCLUDED}}
+
+\end{DoxyCode}

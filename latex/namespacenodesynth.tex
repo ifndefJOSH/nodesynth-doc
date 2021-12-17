@@ -1,0 +1,396 @@
+\hypertarget{namespacenodesynth}{}\doxysection{nodesynth Namespace Reference}
+\label{namespacenodesynth}\index{nodesynth@{nodesynth}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classnodesynth_1_1AMModulatorNode}{AMModulator\+Node}}
+\item 
+class \mbox{\hyperlink{classnodesynth_1_1AudioDataStream}{Audio\+Data\+Stream}}
+\item 
+class \mbox{\hyperlink{classnodesynth_1_1AudioDechanneler}{Audio\+Dechanneler}}
+\item 
+class \mbox{\hyperlink{classnodesynth_1_1ChanneledAudioDataStream}{Channeled\+Audio\+Data\+Stream}}
+\item 
+class \mbox{\hyperlink{classnodesynth_1_1ChorusNode}{Chorus\+Node}}
+\item 
+class \mbox{\hyperlink{classnodesynth_1_1CompressorNode}{Compressor\+Node}}
+\item 
+class \mbox{\hyperlink{classnodesynth_1_1DataStream}{Data\+Stream}}
+\item 
+class \mbox{\hyperlink{classnodesynth_1_1EnvelopeNode}{Envelope\+Node}}
+\item 
+class \mbox{\hyperlink{classnodesynth_1_1EQNode}{EQNode}}
+\item 
+class \mbox{\hyperlink{classnodesynth_1_1FilterNode}{Filter\+Node}}
+\item 
+class \mbox{\hyperlink{classnodesynth_1_1FMModulatorNode}{FMModulator\+Node}}
+\item 
+class \mbox{\hyperlink{classnodesynth_1_1FormantNode}{Formant\+Node}}
+\item 
+class \mbox{\hyperlink{classnodesynth_1_1LimiterNode}{Limiter\+Node}}
+\item 
+class \mbox{\hyperlink{classnodesynth_1_1LogFile}{Log\+File}}
+\item 
+struct \mbox{\hyperlink{structnodesynth_1_1MidiNote}{Midi\+Note}}
+\item 
+class \mbox{\hyperlink{classnodesynth_1_1MidiStream}{Midi\+Stream}}
+\item 
+class \mbox{\hyperlink{classnodesynth_1_1ModulatorNode}{Modulator\+Node}}
+\item 
+class \mbox{\hyperlink{classnodesynth_1_1Node}{Node}}
+\item 
+class \mbox{\hyperlink{classnodesynth_1_1NodeGraph}{Node\+Graph}}
+\item 
+class \mbox{\hyperlink{classnodesynth_1_1NodeSynth}{Node\+Synth}}
+\item 
+class \mbox{\hyperlink{classnodesynth_1_1Options}{Options}}
+\item 
+class \mbox{\hyperlink{classnodesynth_1_1OscillatorNode}{Oscillator\+Node}}
+\item 
+class \mbox{\hyperlink{classnodesynth_1_1PanningNode}{Panning\+Node}}
+\item 
+struct \mbox{\hyperlink{structnodesynth_1_1port__pair__t}{port\+\_\+pair\+\_\+t}}
+\item 
+class \mbox{\hyperlink{classnodesynth_1_1PresetParser}{Preset\+Parser}}
+\item 
+class \mbox{\hyperlink{classnodesynth_1_1PrimitiveDataStream}{Primitive\+Data\+Stream}}
+\item 
+class \mbox{\hyperlink{classnodesynth_1_1PrimitiveFilterNode}{Primitive\+Filter\+Node}}
+\item 
+class \mbox{\hyperlink{classnodesynth_1_1PrimitiveOscillatorNode}{Primitive\+Oscillator\+Node}}
+\item 
+class \mbox{\hyperlink{classnodesynth_1_1ResamplerNode}{Resampler\+Node}}
+\item 
+class \mbox{\hyperlink{classnodesynth_1_1SamplerNode}{Sampler\+Node}}
+\item 
+class \mbox{\hyperlink{classnodesynth_1_1TimeDomainAudioStream}{Time\+Domain\+Audio\+Stream}}
+\item 
+class \mbox{\hyperlink{classnodesynth_1_1WavetableOscillatorNode}{Wavetable\+Oscillator\+Node}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacenodesynth_af1a498a949d76a8a7e159b1e30e90151}\label{namespacenodesynth_af1a498a949d76a8a7e159b1e30e90151}} 
+typedef unsigned char {\bfseries waveform\+\_\+t}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacenodesynth_ad230acd71c37a7b2ad7c9f15ac371a29}\label{namespacenodesynth_ad230acd71c37a7b2ad7c9f15ac371a29}} 
+enum {\bfseries streamtype} \{ \newline
+{\bfseries AUDIO}
+, {\bfseries CHANNELED\+\_\+\+AUDIO}
+, {\bfseries TIME\+\_\+\+DOMAIN\+\_\+\+AUDIO}
+, {\bfseries MIDI}
+, \newline
+{\bfseries PRIMITIVE\+\_\+\+INTEGER}
+, {\bfseries PRIMITIVE\+\_\+\+UNSIGNED\+\_\+\+INTEGER}
+, {\bfseries PRIMITIVE\+\_\+\+FLOAT}
+, {\bfseries PRIMITIVE\+\_\+\+BOOLEAN}
+, \newline
+{\bfseries UNDEFINED\+\_\+\+TYPE}
+ \}
+\item 
+\mbox{\Hypertarget{namespacenodesynth_a3a284b15b25159f381ec6d279e93b181}\label{namespacenodesynth_a3a284b15b25159f381ec6d279e93b181}} 
+enum {\bfseries WAVEFORMS} \{ {\bfseries SAWTOOTH} = 0
+, {\bfseries SQUARE} = 1
+, {\bfseries SINE} = 2
+, {\bfseries TRIANGLE} = 3
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespacenodesynth_a410d7df106396e130e26fdb7a31f3f98}{good}} (std\+::string msg)
+\item 
+void \mbox{\hyperlink{namespacenodesynth_a3f5c79705dfd81d8956e3002e1d1e2c9}{neutral}} (std\+::string msg)
+\item 
+void \mbox{\hyperlink{namespacenodesynth_a784619fc491f3144966f1dcd7aace826}{info}} (std\+::string msg)
+\item 
+void \mbox{\hyperlink{namespacenodesynth_a32569a2ed39bcb08e268c80ef901e199}{warning}} (std\+::string msg)
+\item 
+void \mbox{\hyperlink{namespacenodesynth_ad0ab851f214aa06cf803dae05019f4aa}{error}} (std\+::string msg)
+\item 
+void \mbox{\hyperlink{namespacenodesynth_a5cc6e53399f431b12ccb1969f4388bcc}{error\+Exit}} (std\+::string msg, uint8\+\_\+t exit\+Code)
+\item 
+void \mbox{\hyperlink{namespacenodesynth_adfa5c6219768df023d9c8096adca373c}{debug}} (std\+::string msg)
+\item 
+int \mbox{\hyperlink{namespacenodesynth_a0618d7533dc3b5c96199ef59678b2dce}{inprocess}} (jack\+\_\+nframes\+\_\+t nframes, \mbox{\hyperlink{structnodesynth_1_1port__pair__t}{port\+\_\+pair\+\_\+t}} $\ast$arg)
+\item 
+int \mbox{\hyperlink{namespacenodesynth_a6b821c7c9c9b54421ce2da28cf18173b}{jack\+\_\+initialize}} (jack\+\_\+client\+\_\+t $\ast$client, const char $\ast$load\+\_\+init)
+\item 
+void \mbox{\hyperlink{namespacenodesynth_ae6a428ba5298861ff68fc4ffa7128b1a}{jack\+\_\+finish}} (\mbox{\hyperlink{structnodesynth_1_1port__pair__t}{port\+\_\+pair\+\_\+t}} $\ast$arg)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for \mbox{\hyperlink{classnodesynth_1_1AMModulatorNode}{AMModulator\+Node}} class
+
+Created by Josh Jeppson on 9/21/2021
+
+This file contains method definitions implemented in AMModulator\+Node.\+cpp for the nodesynth project. It is licensed under the MIT license, and is provided at NO WARRANTY. Nodesynth is a project which aims to create a declarative Prolog-\/like language for musical synthesis. Eventually, I also plan to create a GUI, similar to those in Blender, Natron, or Carla.
+
+Header file for \mbox{\hyperlink{classnodesynth_1_1AudioDataStream}{Audio\+Data\+Stream}} class
+
+Created by Josh Jeppson on 9/21/2021
+
+This file contains method definitions implemented in Audio\+Data\+Stream.\+cpp for the nodesynth project. It is licensed under the MIT license, and is provided at NO WARRANTY. Nodesynth is a project which aims to create a declarative Prolog-\/like language for musical synthesis. Eventually, I also plan to create a GUI, similar to those in Blender, Natron, or Carla.
+
+Header file for \mbox{\hyperlink{classnodesynth_1_1ChanneledAudioDataStream}{Channeled\+Audio\+Data\+Stream}} class
+
+Created by Josh Jeppson on 9/21/2021
+
+This file contains method definitions implemented in Channeled\+Audio\+Data\+Stream.\+cpp for the nodesynth project. It is licensed under the MIT license, and is provided at NO WARRANTY. Nodesynth is a project which aims to create a declarative Prolog-\/like language for musical synthesis. Eventually, I also plan to create a GUI, similar to those in Blender, Natron, or Carla.
+
+Header file for \mbox{\hyperlink{classnodesynth_1_1DataStream}{Data\+Stream}} class
+
+Created by Josh Jeppson on 9/21/2021
+
+This file contains method definitions implemented in Data\+Stream.\+cpp for the nodesynth project. It is licensed under the MIT license, and is provided at NO WARRANTY. Nodesynth is a project which aims to create a declarative Prolog-\/like language for musical synthesis. Eventually, I also plan to create a GUI, similar to those in Blender, Natron, or Carla.
+
+Header file for \mbox{\hyperlink{classnodesynth_1_1MidiStream}{Midi\+Stream}} class
+
+Created by Josh Jeppson on 9/21/2021
+
+This file contains method definitions implemented in Midi\+Stream.\+cpp for the nodesynth project. It is licensed under the MIT license, and is provided at NO WARRANTY. Nodesynth is a project which aims to create a declarative Prolog-\/like language for musical synthesis. Eventually, I also plan to create a GUI, similar to those in Blender, Natron, or Carla.
+
+Header file for \mbox{\hyperlink{classnodesynth_1_1PrimitiveDataStream}{Primitive\+Data\+Stream}} class
+
+Created by Josh Jeppson on 9/21/2021
+
+This file contains method definitions implemented in Primitive\+Data\+Stream.\+cpp for the nodesynth project. It is licensed under the MIT license, and is provided at NO WARRANTY. Nodesynth is a project which aims to create a declarative Prolog-\/like language for musical synthesis. Eventually, I also plan to create a GUI, similar to those in Blender, Natron, or Carla.
+
+Header file for \mbox{\hyperlink{classnodesynth_1_1TimeDomainAudioStream}{Time\+Domain\+Audio\+Stream}} class
+
+Created by Josh Jeppson on 9/21/2021
+
+This file contains method definitions implemented in Time\+Domain\+Audio\+Stream.\+cpp for the nodesynth project. It is licensed under the MIT license, and is provided at NO WARRANTY. Nodesynth is a project which aims to create a declarative Prolog-\/like language for musical synthesis. Eventually, I also plan to create a GUI, similar to those in Blender, Natron, or Carla.
+
+Header file for \mbox{\hyperlink{classnodesynth_1_1Node}{Node}} class
+
+Created by Josh Jeppson on 9/21/2021
+
+This file contains method definitions implemented in Node.\+cpp for the nodesynth project. It is licensed under the MIT license, and is provided at NO WARRANTY. Nodesynth is a project which aims to create a declarative Prolog-\/like language for musical synthesis. Eventually, I also plan to create a GUI, similar to those in Blender, Natron, or Carla.
+
+Header file for \mbox{\hyperlink{classnodesynth_1_1ChorusNode}{Chorus\+Node}} class
+
+Created by Josh Jeppson on 9/21/2021
+
+This file contains method definitions implemented in Chorus\+Node.\+cpp for the nodesynth project. It is licensed under the MIT license, and is provided at NO WARRANTY. Nodesynth is a project which aims to create a declarative Prolog-\/like language for musical synthesis. Eventually, I also plan to create a GUI, similar to those in Blender, Natron, or Carla.
+
+Header file for \mbox{\hyperlink{classnodesynth_1_1CompressorNode}{Compressor\+Node}} class
+
+Created by Josh Jeppson on 9/21/2021
+
+This file contains method definitions implemented in Compressor\+Node.\+cpp for the nodesynth project. It is licensed under the MIT license, and is provided at NO WARRANTY. Nodesynth is a project which aims to create a declarative Prolog-\/like language for musical synthesis. Eventually, I also plan to create a GUI, similar to those in Blender, Natron, or Carla.
+
+Header file for \mbox{\hyperlink{classnodesynth_1_1EnvelopeNode}{Envelope\+Node}} class
+
+Created by Josh Jeppson on 9/21/2021
+
+This file contains method definitions implemented in Envelope\+Node.\+cpp for the nodesynth project. It is licensed under the MIT license, and is provided at NO WARRANTY. Nodesynth is a project which aims to create a declarative Prolog-\/like language for musical synthesis. Eventually, I also plan to create a GUI, similar to those in Blender, Natron, or Carla.
+
+Header file for \mbox{\hyperlink{classnodesynth_1_1EQNode}{EQNode}} class
+
+Created by Josh Jeppson on 9/21/2021
+
+This file contains method definitions implemented in EQNode.\+cpp for the nodesynth project. It is licensed under the MIT license, and is provided at NO WARRANTY. Nodesynth is a project which aims to create a declarative Prolog-\/like language for musical synthesis. Eventually, I also plan to create a GUI, similar to those in Blender, Natron, or Carla.
+
+Header file for \mbox{\hyperlink{classnodesynth_1_1FilterNode}{Filter\+Node}} class
+
+Created by Josh Jeppson on 9/21/2021
+
+This file contains method definitions implemented in Filter\+Node.\+cpp for the nodesynth project. It is licensed under the MIT license, and is provided at NO WARRANTY. Nodesynth is a project which aims to create a declarative Prolog-\/like language for musical synthesis. Eventually, I also plan to create a GUI, similar to those in Blender, Natron, or Carla.
+
+Header file for \mbox{\hyperlink{classnodesynth_1_1FMModulatorNode}{FMModulator\+Node}} class
+
+Created by Josh Jeppson on 9/21/2021
+
+This file contains method definitions implemented in FMModulator\+Node.\+cpp for the nodesynth project. It is licensed under the MIT license, and is provided at NO WARRANTY. Nodesynth is a project which aims to create a declarative Prolog-\/like language for musical synthesis. Eventually, I also plan to create a GUI, similar to those in Blender, Natron, or Carla.
+
+Header file for \mbox{\hyperlink{classnodesynth_1_1FormantNode}{Formant\+Node}} class
+
+Created by Josh Jeppson on 9/21/2021
+
+This file contains method definitions implemented in Formant\+Node.\+cpp for the nodesynth project. It is licensed under the MIT license, and is provided at NO WARRANTY. Nodesynth is a project which aims to create a declarative Prolog-\/like language for musical synthesis. Eventually, I also plan to create a GUI, similar to those in Blender, Natron, or Carla.
+
+Header file for \mbox{\hyperlink{classnodesynth_1_1LimiterNode}{Limiter\+Node}} class
+
+Created by Josh Jeppson on 9/21/2021
+
+This file contains method definitions implemented in Limiter\+Node.\+cpp for the nodesynth project. It is licensed under the MIT license, and is provided at NO WARRANTY. Nodesynth is a project which aims to create a declarative Prolog-\/like language for musical synthesis. Eventually, I also plan to create a GUI, similar to those in Blender, Natron, or Carla.
+
+Header file for \mbox{\hyperlink{classnodesynth_1_1ModulatorNode}{Modulator\+Node}} class
+
+Created by Josh Jeppson on 9/21/2021
+
+This file contains method definitions implemented in Modulator\+Node.\+cpp for the nodesynth project. It is licensed under the MIT license, and is provided at NO WARRANTY. Nodesynth is a project which aims to create a declarative Prolog-\/like language for musical synthesis. Eventually, I also plan to create a GUI, similar to those in Blender, Natron, or Carla.
+
+Header file for \mbox{\hyperlink{classnodesynth_1_1OscillatorNode}{Oscillator\+Node}} class
+
+Created by Josh Jeppson on 9/21/2021
+
+This file contains method definitions implemented in Oscillator\+Node.\+cpp for the nodesynth project. It is licensed under the MIT license, and is provided at NO WARRANTY. Nodesynth is a project which aims to create a declarative Prolog-\/like language for musical synthesis. Eventually, I also plan to create a GUI, similar to those in Blender, Natron, or Carla.
+
+Header file for \mbox{\hyperlink{classnodesynth_1_1PanningNode}{Panning\+Node}} class
+
+Created by Josh Jeppson on 9/21/2021
+
+This file contains method definitions implemented in Panning\+Node.\+cpp for the nodesynth project. It is licensed under the MIT license, and is provided at NO WARRANTY. Nodesynth is a project which aims to create a declarative Prolog-\/like language for musical synthesis. Eventually, I also plan to create a GUI, similar to those in Blender, Natron, or Carla.
+
+Header file for \mbox{\hyperlink{classnodesynth_1_1PrimitiveFilterNode}{Primitive\+Filter\+Node}} class
+
+Created by Josh Jeppson on 9/21/2021
+
+This file contains method definitions implemented in Primitive\+Filter\+Node.\+cpp for the nodesynth project. It is licensed under the MIT license, and is provided at NO WARRANTY. Nodesynth is a project which aims to create a declarative Prolog-\/like language for musical synthesis. Eventually, I also plan to create a GUI, similar to those in Blender, Natron, or Carla.
+
+Header file for \mbox{\hyperlink{classnodesynth_1_1PrimitiveOscillatorNode}{Primitive\+Oscillator\+Node}} class
+
+Created by Josh Jeppson on 9/21/2021
+
+This file contains method definitions implemented in Primitive\+Oscillator\+Node.\+cpp for the nodesynth project. It is licensed under the MIT license, and is provided at NO WARRANTY. Nodesynth is a project which aims to create a declarative Prolog-\/like language for musical synthesis. Eventually, I also plan to create a GUI, similar to those in Blender, Natron, or Carla.
+
+Header file for \mbox{\hyperlink{classnodesynth_1_1ResamplerNode}{Resampler\+Node}} class
+
+Created by Josh Jeppson on 9/21/2021
+
+This file contains method definitions implemented in Resampler\+Node.\+cpp for the nodesynth project. It is licensed under the MIT license, and is provided at NO WARRANTY. Nodesynth is a project which aims to create a declarative Prolog-\/like language for musical synthesis. Eventually, I also plan to create a GUI, similar to those in Blender, Natron, or Carla.
+
+Header file for \mbox{\hyperlink{classnodesynth_1_1SamplerNode}{Sampler\+Node}} class
+
+Created by Josh Jeppson on 9/21/2021
+
+This file contains method definitions implemented in Sampler\+Node.\+cpp for the nodesynth project. It is licensed under the MIT license, and is provided at NO WARRANTY. Nodesynth is a project which aims to create a declarative Prolog-\/like language for musical synthesis. Eventually, I also plan to create a GUI, similar to those in Blender, Natron, or Carla.
+
+Header file for \mbox{\hyperlink{classnodesynth_1_1WavetableOscillatorNode}{Wavetable\+Oscillator\+Node}} class
+
+Created by Josh Jeppson on 9/21/2021
+
+This file contains method definitions implemented in Wavetable\+Oscillator\+Node.\+cpp for the nodesynth project. It is licensed under the MIT license, and is provided at NO WARRANTY. Nodesynth is a project which aims to create a declarative Prolog-\/like language for musical synthesis. Eventually, I also plan to create a GUI, similar to those in Blender, Natron, or Carla. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacenodesynth_adfa5c6219768df023d9c8096adca373c}\label{namespacenodesynth_adfa5c6219768df023d9c8096adca373c}} 
+\index{nodesynth@{nodesynth}!debug@{debug}}
+\index{debug@{debug}!nodesynth@{nodesynth}}
+\doxysubsubsection{\texorpdfstring{debug()}{debug()}}
+{\footnotesize\ttfamily void nodesynth\+::debug (\begin{DoxyParamCaption}\item[{std\+::string}]{msg }\end{DoxyParamCaption})}
+
+Function name\+: debug
+
+Prints a debug message in purple to std\+::cerr, and to log if specified. Only prints if debug statement printing is on (PRINT\+\_\+\+DEBUG\+\_\+\+STATEMENTS directive in preprocessor)
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Message to print. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacenodesynth_ad0ab851f214aa06cf803dae05019f4aa}\label{namespacenodesynth_ad0ab851f214aa06cf803dae05019f4aa}} 
+\index{nodesynth@{nodesynth}!error@{error}}
+\index{error@{error}!nodesynth@{nodesynth}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily void nodesynth\+::error (\begin{DoxyParamCaption}\item[{std\+::string}]{msg }\end{DoxyParamCaption})}
+
+Function name\+: error
+
+Prints an error message in red to std\+::cerr, and to log if specified.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The message to print \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacenodesynth_a5cc6e53399f431b12ccb1969f4388bcc}\label{namespacenodesynth_a5cc6e53399f431b12ccb1969f4388bcc}} 
+\index{nodesynth@{nodesynth}!errorExit@{errorExit}}
+\index{errorExit@{errorExit}!nodesynth@{nodesynth}}
+\doxysubsubsection{\texorpdfstring{errorExit()}{errorExit()}}
+{\footnotesize\ttfamily void nodesynth\+::error\+Exit (\begin{DoxyParamCaption}\item[{std\+::string}]{msg,  }\item[{uint8\+\_\+t}]{exit\+Code = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+Function name\+: error\+Exit
+
+Prints an error message in red to std\+::cerr, and to log if specified. Then, exits using a specified exit code.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The message to print \\
+\hline
+{\em exit\+Code} & The exit code to exit with \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacenodesynth_a410d7df106396e130e26fdb7a31f3f98}\label{namespacenodesynth_a410d7df106396e130e26fdb7a31f3f98}} 
+\index{nodesynth@{nodesynth}!good@{good}}
+\index{good@{good}!nodesynth@{nodesynth}}
+\doxysubsubsection{\texorpdfstring{good()}{good()}}
+{\footnotesize\ttfamily void nodesynth\+::good (\begin{DoxyParamCaption}\item[{std\+::string}]{msg }\end{DoxyParamCaption})}
+
+Function name\+: good
+
+Prints a positive message in green to std\+::cerr, and to log if specified.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The message to print \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacenodesynth_a784619fc491f3144966f1dcd7aace826}\label{namespacenodesynth_a784619fc491f3144966f1dcd7aace826}} 
+\index{nodesynth@{nodesynth}!info@{info}}
+\index{info@{info}!nodesynth@{nodesynth}}
+\doxysubsubsection{\texorpdfstring{info()}{info()}}
+{\footnotesize\ttfamily void nodesynth\+::info (\begin{DoxyParamCaption}\item[{std\+::string}]{msg }\end{DoxyParamCaption})}
+
+Function name\+: info
+
+Prints an informative message in blue to std\+::cerr, and to log if specified.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The message to print \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacenodesynth_a0618d7533dc3b5c96199ef59678b2dce}\label{namespacenodesynth_a0618d7533dc3b5c96199ef59678b2dce}} 
+\index{nodesynth@{nodesynth}!inprocess@{inprocess}}
+\index{inprocess@{inprocess}!nodesynth@{nodesynth}}
+\doxysubsubsection{\texorpdfstring{inprocess()}{inprocess()}}
+{\footnotesize\ttfamily int nodesynth\+::inprocess (\begin{DoxyParamCaption}\item[{jack\+\_\+nframes\+\_\+t}]{nframes,  }\item[{\mbox{\hyperlink{structnodesynth_1_1port__pair__t}{port\+\_\+pair\+\_\+t}} $\ast$}]{arg }\end{DoxyParamCaption})}
+
+This function is called every processing cycle \mbox{\Hypertarget{namespacenodesynth_ae6a428ba5298861ff68fc4ffa7128b1a}\label{namespacenodesynth_ae6a428ba5298861ff68fc4ffa7128b1a}} 
+\index{nodesynth@{nodesynth}!jack\_finish@{jack\_finish}}
+\index{jack\_finish@{jack\_finish}!nodesynth@{nodesynth}}
+\doxysubsubsection{\texorpdfstring{jack\_finish()}{jack\_finish()}}
+{\footnotesize\ttfamily void nodesynth\+::jack\+\_\+finish (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structnodesynth_1_1port__pair__t}{port\+\_\+pair\+\_\+t}} $\ast$}]{arg }\end{DoxyParamCaption})}
+
+Called when Nodesynth is finished within JACK \mbox{\Hypertarget{namespacenodesynth_a6b821c7c9c9b54421ce2da28cf18173b}\label{namespacenodesynth_a6b821c7c9c9b54421ce2da28cf18173b}} 
+\index{nodesynth@{nodesynth}!jack\_initialize@{jack\_initialize}}
+\index{jack\_initialize@{jack\_initialize}!nodesynth@{nodesynth}}
+\doxysubsubsection{\texorpdfstring{jack\_initialize()}{jack\_initialize()}}
+{\footnotesize\ttfamily int nodesynth\+::jack\+\_\+initialize (\begin{DoxyParamCaption}\item[{jack\+\_\+client\+\_\+t $\ast$}]{client,  }\item[{const char $\ast$}]{load\+\_\+init }\end{DoxyParamCaption})}
+
+Called when Nodesynth is set up within JACK \mbox{\Hypertarget{namespacenodesynth_a3f5c79705dfd81d8956e3002e1d1e2c9}\label{namespacenodesynth_a3f5c79705dfd81d8956e3002e1d1e2c9}} 
+\index{nodesynth@{nodesynth}!neutral@{neutral}}
+\index{neutral@{neutral}!nodesynth@{nodesynth}}
+\doxysubsubsection{\texorpdfstring{neutral()}{neutral()}}
+{\footnotesize\ttfamily void nodesynth\+::neutral (\begin{DoxyParamCaption}\item[{std\+::string}]{msg }\end{DoxyParamCaption})}
+
+Function name\+: neutral
+
+Prints a neutral message in purple to std\+::cerr, and to log if specified.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The message to print \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacenodesynth_a32569a2ed39bcb08e268c80ef901e199}\label{namespacenodesynth_a32569a2ed39bcb08e268c80ef901e199}} 
+\index{nodesynth@{nodesynth}!warning@{warning}}
+\index{warning@{warning}!nodesynth@{nodesynth}}
+\doxysubsubsection{\texorpdfstring{warning()}{warning()}}
+{\footnotesize\ttfamily void nodesynth\+::warning (\begin{DoxyParamCaption}\item[{std\+::string}]{msg }\end{DoxyParamCaption})}
+
+Function name\+: warning
+
+Prints a warning message in yellow to std\+::cerr, and to log if specified.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & The message to print \\
+\hline
+\end{DoxyParams}

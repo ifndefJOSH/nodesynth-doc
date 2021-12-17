@@ -1,0 +1,27 @@
+\hypertarget{TimeDomainAudioStream_8h_source}{}\doxysection{Time\+Domain\+Audio\+Stream.\+h}
+\label{TimeDomainAudioStream_8h_source}\index{src/datastream/TimeDomainAudioStream.h@{src/datastream/TimeDomainAudioStream.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#ifndef TIME\_DOMAIN\_AUDIO\_STREAM\_H\_INCLUDED}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#define TIME\_DOMAIN\_AUDIO\_STREAM\_H\_INCLUDED}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}DataStream.h"{}}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include <complex>}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacenodesynth}{nodesynth}} \{}
+\DoxyCodeLine{21     \textcolor{keyword}{class }\mbox{\hyperlink{classnodesynth_1_1TimeDomainAudioStream}{TimeDomainAudioStream}} : \textcolor{keyword}{public} \mbox{\hyperlink{classnodesynth_1_1DataStream}{DataStream}} \{}
+\DoxyCodeLine{22     \textcolor{keyword}{public}:}
+\DoxyCodeLine{23         \mbox{\hyperlink{classnodesynth_1_1TimeDomainAudioStream}{TimeDomainAudioStream}}(\textcolor{keyword}{const} std::string name);}
+\DoxyCodeLine{24         \mbox{\hyperlink{classnodesynth_1_1TimeDomainAudioStream}{\string~TimeDomainAudioStream}}();}
+\DoxyCodeLine{25         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} update();}
+\DoxyCodeLine{26         std::complex<double> * audio;}
+\DoxyCodeLine{27     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{28     \textcolor{keyword}{private}:}
+\DoxyCodeLine{29     \};}
+\DoxyCodeLine{30 \} \textcolor{comment}{// namespace nodesynth}}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// TIME\_DOMAIN\_AUDIO\_STREAM\_H\_INCLUDED}}
+
+\end{DoxyCode}

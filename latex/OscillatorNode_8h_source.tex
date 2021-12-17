@@ -1,0 +1,32 @@
+\hypertarget{OscillatorNode_8h_source}{}\doxysection{Oscillator\+Node.\+h}
+\label{OscillatorNode_8h_source}\index{src/node/OscillatorNode.h@{src/node/OscillatorNode.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#ifndef OSCILLATORNODE\_H\_INCLUDED}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#define OSCILLATORNODE\_H\_INCLUDED}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}Node.h"{}}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}../datastream/MidiStream.h"{}}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}../datastream/ChanneledAudioDataStream.h"{}}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacenodesynth}{nodesynth}} \{}
+\DoxyCodeLine{23     \textcolor{keyword}{class }\mbox{\hyperlink{classnodesynth_1_1OscillatorNode}{OscillatorNode}} : \textcolor{keyword}{protected} \mbox{\hyperlink{classnodesynth_1_1Node}{Node}} \{}
+\DoxyCodeLine{24     \textcolor{keyword}{public}:}
+\DoxyCodeLine{25         \mbox{\hyperlink{classnodesynth_1_1OscillatorNode}{OscillatorNode}}(std::string name);}
+\DoxyCodeLine{26         \textcolor{keyword}{static} \textcolor{keywordtype}{double} frequencyFromMidiNote(uint8\_t midiNote);}
+\DoxyCodeLine{27         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classnodesynth_1_1OscillatorNode_a014338fae9f35153a11fb614528a0953}{connect}}(\mbox{\hyperlink{classnodesynth_1_1DataStream}{DataStream}} * ds, uint8\_t port);}
+\DoxyCodeLine{28         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classnodesynth_1_1OscillatorNode_afd61feb591587d5d480a4a38342f0a29}{disconnect}}(uint8\_t port);}
+\DoxyCodeLine{29         \mbox{\hyperlink{classnodesynth_1_1ChanneledAudioDataStream}{ChanneledAudioDataStream}} out;}
+\DoxyCodeLine{30         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} initializePorts();}
+\DoxyCodeLine{31         \textcolor{comment}{// OscillatorNode is still Abstract}}
+\DoxyCodeLine{32         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} update() = 0;}
+\DoxyCodeLine{33     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{34         \mbox{\hyperlink{classnodesynth_1_1MidiStream}{MidiStream}} * notesIn;}
+\DoxyCodeLine{35     \textcolor{keyword}{private}:}
+\DoxyCodeLine{36     \};}
+\DoxyCodeLine{37 \} \textcolor{comment}{// namespace nodesynth}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// OSCILLATORNODE\_H\_INCLUDED}}
+
+\end{DoxyCode}

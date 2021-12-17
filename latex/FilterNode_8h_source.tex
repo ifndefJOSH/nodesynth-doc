@@ -1,0 +1,32 @@
+\hypertarget{FilterNode_8h_source}{}\doxysection{Filter\+Node.\+h}
+\label{FilterNode_8h_source}\index{src/node/FilterNode.h@{src/node/FilterNode.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#ifndef FILTERNODE\_H\_INCLUDED}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#define FILTERNODE\_H\_INCLUDED}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}Node.h"{}}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}../datastream/AudioDataStream.h"{}}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacenodesynth}{nodesynth}} \{}
+\DoxyCodeLine{21      \textcolor{keyword}{class }\mbox{\hyperlink{classnodesynth_1_1FilterNode}{FilterNode}} : \mbox{\hyperlink{classnodesynth_1_1Node}{Node}} \{}
+\DoxyCodeLine{22     \textcolor{keyword}{public}:}
+\DoxyCodeLine{23         \mbox{\hyperlink{classnodesynth_1_1FilterNode}{FilterNode}}(std::string name);}
+\DoxyCodeLine{24         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} initializePorts();}
+\DoxyCodeLine{25         \textcolor{comment}{// Filter node is still abstract}}
+\DoxyCodeLine{26         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} update() = 0;}
+\DoxyCodeLine{27         \textcolor{comment}{// Sets the input streams}}
+\DoxyCodeLine{28         \textcolor{keywordtype}{void} setFilterInputStream(\mbox{\hyperlink{classnodesynth_1_1AudioDataStream}{AudioDataStream}} * filterValue);}
+\DoxyCodeLine{29         \textcolor{keywordtype}{void} setAudioInputStream(\mbox{\hyperlink{classnodesynth_1_1AudioDataStream}{AudioDataStream}} * audio);}
+\DoxyCodeLine{30         \textcolor{comment}{// Output streams}}
+\DoxyCodeLine{31         \mbox{\hyperlink{classnodesynth_1_1AudioDataStream}{AudioDataStream}} * filteredAudio;}
+\DoxyCodeLine{32     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{33     \textcolor{keyword}{private}:}
+\DoxyCodeLine{34         \mbox{\hyperlink{classnodesynth_1_1AudioDataStream}{AudioDataStream}} * filterValue;}
+\DoxyCodeLine{35         \mbox{\hyperlink{classnodesynth_1_1AudioDataStream}{AudioDataStream}} * audio;}
+\DoxyCodeLine{36     \};}
+\DoxyCodeLine{37 \} \textcolor{comment}{// namespace nodesynth}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// FILTERNODE\_H\_INCLUDED}}
+
+\end{DoxyCode}

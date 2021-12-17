@@ -1,0 +1,27 @@
+\hypertarget{AudioDataStream_8h_source}{}\doxysection{Audio\+Data\+Stream.\+h}
+\label{AudioDataStream_8h_source}\index{src/datastream/AudioDataStream.h@{src/datastream/AudioDataStream.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#ifndef AUDIODATASTREAM\_H\_INCLUDED}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#define AUDIODATASTREAM\_H\_INCLUDED}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}DataStream.h"{}}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include <complex>}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacenodesynth}{nodesynth}} \{}
+\DoxyCodeLine{22     \textcolor{keyword}{class }\mbox{\hyperlink{classnodesynth_1_1AudioDataStream}{AudioDataStream}} : \mbox{\hyperlink{classnodesynth_1_1DataStream}{DataStream}}\{}
+\DoxyCodeLine{23     \textcolor{keyword}{public}:}
+\DoxyCodeLine{24         \mbox{\hyperlink{classnodesynth_1_1AudioDataStream}{AudioDataStream}}(\textcolor{keyword}{const} std::string name);}
+\DoxyCodeLine{25         \mbox{\hyperlink{classnodesynth_1_1AudioDataStream}{\string~AudioDataStream}}();}
+\DoxyCodeLine{26         std::complex<double> * audio;}
+\DoxyCodeLine{27     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{28     \textcolor{keyword}{private}:}
+\DoxyCodeLine{29         uint64\_t bufSize;}
+\DoxyCodeLine{30         \textcolor{keywordtype}{size\_t} copySize;}
+\DoxyCodeLine{31     \};}
+\DoxyCodeLine{32 \} \textcolor{comment}{// namespace nodesynth}}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// AUDIODATASTREAM\_H\_INCLUDED}}
+
+\end{DoxyCode}

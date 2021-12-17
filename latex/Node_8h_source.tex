@@ -1,0 +1,46 @@
+\hypertarget{Node_8h_source}{}\doxysection{Node.\+h}
+\label{Node_8h_source}\index{src/node/Node.h@{src/node/Node.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#ifndef NODE\_H\_INCLUDED}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#define NODE\_H\_INCLUDED}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include "{}../datastream/DataStream.h"{}}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include "{}../core/Options.h"{}}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacenodesynth}{nodesynth}} \{}
+\DoxyCodeLine{26     \textcolor{keyword}{class }\mbox{\hyperlink{classnodesynth_1_1Node}{Node}} \{}
+\DoxyCodeLine{27     \textcolor{keyword}{public}:}
+\DoxyCodeLine{28         \mbox{\hyperlink{classnodesynth_1_1Node}{Node}}(\textcolor{keyword}{const} std::string name);}
+\DoxyCodeLine{29         \mbox{\hyperlink{classnodesynth_1_1Node}{\string~Node}}();}
+\DoxyCodeLine{30         \textcolor{keywordtype}{void} updateForward();}
+\DoxyCodeLine{31         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} initializePorts() = 0;}
+\DoxyCodeLine{32         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} update() = 0;}
+\DoxyCodeLine{33         \textcolor{keyword}{const} std::string getName();}
+\DoxyCodeLine{40         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classnodesynth_1_1Node_ae3dec01601b59a48f65864e02814a1f9}{connect}}(\mbox{\hyperlink{classnodesynth_1_1DataStream}{DataStream}} * ds, uint8\_t port) = 0;}
+\DoxyCodeLine{46         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classnodesynth_1_1Node_a4d5e5a3e58c7b4453bd2a2d398658ec1}{disconnect}}(uint8\_t port) = 0;}
+\DoxyCodeLine{50         \textcolor{keywordtype}{void} \mbox{\hyperlink{classnodesynth_1_1Node_a20762c877a71bd8602887a55cfd98265}{updateAllStreams}}();}
+\DoxyCodeLine{51         \textcolor{comment}{// Data so that the NodeGraph can perform a DFS and run it}}
+\DoxyCodeLine{52         std::vector<Node *> parents;}
+\DoxyCodeLine{53         std::vector<Node *> children;}
+\DoxyCodeLine{54         \textcolor{comment}{// Number of children that have been updated (must equal length of children)}}
+\DoxyCodeLine{55         uint8\_t numChildrenSinceLastUpdate;}
+\DoxyCodeLine{56         \textcolor{keywordtype}{bool} visited;}
+\DoxyCodeLine{57         std::vector<DataStream *> streams;}
+\DoxyCodeLine{58     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{59         \textcolor{keywordtype}{void} addDataStreamToPorts(std::shared\_ptr<DataStream> ds);}
+\DoxyCodeLine{60     \textcolor{keyword}{private}:}
+\DoxyCodeLine{61         std::map<std::string, std::shared\_ptr<DataStream>> ports;}
+\DoxyCodeLine{62         \textcolor{keyword}{const} std::string name;}
+\DoxyCodeLine{63     \};}
+\DoxyCodeLine{64 \} \textcolor{comment}{// namespace nodesynth}}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// NODE\_H\_INCLUDED}}
+
+\end{DoxyCode}

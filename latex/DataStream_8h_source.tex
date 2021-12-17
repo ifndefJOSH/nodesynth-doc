@@ -1,0 +1,47 @@
+\hypertarget{DataStream_8h_source}{}\doxysection{Data\+Stream.\+h}
+\label{DataStream_8h_source}\index{src/datastream/DataStream.h@{src/datastream/DataStream.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#ifndef DATASTREAM\_H\_INCLUDED}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#define DATASTREAM\_H\_INCLUDED}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}../core/Options.h"{}}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacenodesynth}{nodesynth}} \{}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{keyword}{enum} streamtype \{}
+\DoxyCodeLine{24         \textcolor{comment}{// (Monaural) Audio in frequency domain}}
+\DoxyCodeLine{25         AUDIO}
+\DoxyCodeLine{26         \textcolor{comment}{// (Monaural) Audio in frequency domain separated by MIDI channel}}
+\DoxyCodeLine{27         , CHANNELED\_AUDIO}
+\DoxyCodeLine{28         \textcolor{comment}{// (Monaural) Audio in time domain}}
+\DoxyCodeLine{29         , TIME\_DOMAIN\_AUDIO}
+\DoxyCodeLine{30         \textcolor{comment}{// Midi Events}}
+\DoxyCodeLine{31         , MIDI}
+\DoxyCodeLine{32         \textcolor{comment}{// PrimitiveDataStream<type> is forward declared}}
+\DoxyCodeLine{33         , PRIMITIVE\_INTEGER}
+\DoxyCodeLine{34         , PRIMITIVE\_UNSIGNED\_INTEGER}
+\DoxyCodeLine{35         , PRIMITIVE\_FLOAT}
+\DoxyCodeLine{36         , PRIMITIVE\_BOOLEAN}
+\DoxyCodeLine{37         \textcolor{comment}{// Base case so g++ doesn't yell at me}}
+\DoxyCodeLine{38         , UNDEFINED\_TYPE}
+\DoxyCodeLine{39     \};}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \textcolor{keyword}{class }\mbox{\hyperlink{classnodesynth_1_1DataStream}{DataStream}} \{}
+\DoxyCodeLine{42     \textcolor{keyword}{public}:}
+\DoxyCodeLine{43         \mbox{\hyperlink{classnodesynth_1_1DataStream}{DataStream}}(\textcolor{keyword}{const} std::string name, streamtype type = UNDEFINED\_TYPE);}
+\DoxyCodeLine{44         \textcolor{keyword}{const} streamtype getStreamType();}
+\DoxyCodeLine{45         std::string getName();}
+\DoxyCodeLine{46         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} update();}
+\DoxyCodeLine{47     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{48         \textcolor{keyword}{const} streamtype type;}
+\DoxyCodeLine{49     \textcolor{keyword}{private}:}
+\DoxyCodeLine{50         \textcolor{keyword}{const} std::string name;}
+\DoxyCodeLine{51     \};}
+\DoxyCodeLine{52 \} \textcolor{comment}{// namespace nodesynth}}
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// DATASTREAM\_H\_INCLUDED}}
+
+\end{DoxyCode}

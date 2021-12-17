@@ -1,0 +1,32 @@
+\hypertarget{AudioDechanneler_8h_source}{}\doxysection{Audio\+Dechanneler.\+h}
+\label{AudioDechanneler_8h_source}\index{src/node/AudioDechanneler.h@{src/node/AudioDechanneler.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#ifndef AUDIO\_DECHANNELER\_H\_INCLUDED}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#define AUDIO\_DECHANNELER\_H\_INCLUDED}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}Node.h"{}}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}../datastream/ChanneledAudioDataStream.h"{}}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}../datastream/AudioDataStream.h"{}}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacenodesynth}{nodesynth}} \{}
+\DoxyCodeLine{22     \textcolor{keyword}{class }\mbox{\hyperlink{classnodesynth_1_1AudioDechanneler}{AudioDechanneler}} : \mbox{\hyperlink{classnodesynth_1_1Node}{Node}} \{}
+\DoxyCodeLine{23     \textcolor{keyword}{public}:}
+\DoxyCodeLine{24         \mbox{\hyperlink{classnodesynth_1_1AudioDechanneler}{AudioDechanneler}}(std::string name);}
+\DoxyCodeLine{25         \mbox{\hyperlink{classnodesynth_1_1AudioDechanneler}{\string~AudioDechanneler}}();}
+\DoxyCodeLine{26         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} initializePorts();}
+\DoxyCodeLine{30         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classnodesynth_1_1AudioDechanneler_a0095b0e89c9ea20bf246c8f1100f62e4}{update}}();}
+\DoxyCodeLine{31         \textcolor{keywordtype}{void} connectInput(\mbox{\hyperlink{classnodesynth_1_1ChanneledAudioDataStream}{ChanneledAudioDataStream}} * input);}
+\DoxyCodeLine{32         \mbox{\hyperlink{classnodesynth_1_1AudioDataStream}{AudioDataStream}} * output;}
+\DoxyCodeLine{33     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     \textcolor{keyword}{private}:}
+\DoxyCodeLine{36         ChannelAudioDataStream * input;}
+\DoxyCodeLine{37     \};}
+\DoxyCodeLine{38 \} \textcolor{comment}{// namespace nodesynth}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// AUDIO\_DECHANNELER\_H\_INCLUDED}}
+\DoxyCodeLine{40 }
+
+\end{DoxyCode}

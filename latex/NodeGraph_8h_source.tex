@@ -1,0 +1,65 @@
+\hypertarget{NodeGraph_8h_source}{}\doxysection{Node\+Graph.\+h}
+\label{NodeGraph_8h_source}\index{src/core/NodeGraph.h@{src/core/NodeGraph.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#ifndef NODEGRAPH\_H\_INCLUDED}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define NODEGRAPH\_H\_INCLUDED}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}../node/Node.h"{}}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}../datastream/MidiStream.h"{}}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}../datastream/AudioDataStream.h"{}}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}../datastream/TimeDomainAudioStream.h"{}}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include <unordered\_map>}    \textcolor{comment}{// Used for graphMap}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include <memory>}           \textcolor{comment}{// Used for std::shared\_ptr}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include <string>}           \textcolor{comment}{// Used for map keys}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include <vector>}           \textcolor{comment}{// Used for clearWithoutDeleting}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#include <thread>}           \textcolor{comment}{// Used for worker thread}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#include <fftw3.h>}          \textcolor{comment}{// For Fast Fourier transform}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacenodesynth}{nodesynth}} \{}
+\DoxyCodeLine{28     \textcolor{keyword}{class }\mbox{\hyperlink{classnodesynth_1_1NodeGraph}{NodeGraph}} \{}
+\DoxyCodeLine{29         \textcolor{keyword}{public}:}
+\DoxyCodeLine{30             \mbox{\hyperlink{classnodesynth_1_1NodeGraph}{NodeGraph}}();}
+\DoxyCodeLine{31             \mbox{\hyperlink{classnodesynth_1_1NodeGraph}{\string~NodeGraph}}();}
+\DoxyCodeLine{39             std::shared\_ptr<Node> \mbox{\hyperlink{classnodesynth_1_1NodeGraph_a818549e35172c93f621687d44c5ea408}{getNodeByName}}(std::string name);}
+\DoxyCodeLine{45             \textcolor{keywordtype}{void} \mbox{\hyperlink{classnodesynth_1_1NodeGraph_a63e99ee713f9725060261a4e2474acdf}{insertNode}}(std::shared\_ptr<Node> node);}
+\DoxyCodeLine{51             \textcolor{keywordtype}{void} \mbox{\hyperlink{classnodesynth_1_1NodeGraph_a63e99ee713f9725060261a4e2474acdf}{insertNode}}(\mbox{\hyperlink{classnodesynth_1_1Node}{Node}} * node);}
+\DoxyCodeLine{55             \textcolor{keywordtype}{void} \mbox{\hyperlink{classnodesynth_1_1NodeGraph_ae21dfbd09a4173e709de46d892356d9d}{clearGraph}}();}
+\DoxyCodeLine{61             std::vector<std::shared\_ptr<Node>> \mbox{\hyperlink{classnodesynth_1_1NodeGraph_aea7c7b6fcad3188642f089ea25a513af}{clearWithoutDeleting}}();}
+\DoxyCodeLine{70             \textcolor{keywordtype}{bool} \mbox{\hyperlink{classnodesynth_1_1NodeGraph_ad02acb3e1434d16c2064f2d74ec8b01f}{connectPorts}}(}
+\DoxyCodeLine{71                 std::string fromNodeId}
+\DoxyCodeLine{72                 , std::string fromNodePortId}
+\DoxyCodeLine{73                 , std::string toNodeId}
+\DoxyCodeLine{74                 , std::string toNodePortId}
+\DoxyCodeLine{75             );}
+\DoxyCodeLine{81             \textcolor{keywordtype}{void} \mbox{\hyperlink{classnodesynth_1_1NodeGraph_ae2ee8be1257c4526e9a4273d9754f7aa}{connectToLeftOutput}}(\mbox{\hyperlink{classnodesynth_1_1AudioDataStream}{AudioDataStream}} * left);}
+\DoxyCodeLine{87             \textcolor{keywordtype}{void} \mbox{\hyperlink{classnodesynth_1_1NodeGraph_acb3710cf73455c878549e3aa45c1f85f}{connectToRightOutput}}(\mbox{\hyperlink{classnodesynth_1_1AudioDataStream}{AudioDataStream}} * right);}
+\DoxyCodeLine{91             \textcolor{keywordtype}{void} \mbox{\hyperlink{classnodesynth_1_1NodeGraph_ab9b17454b2780bf4dab6428f45ad82a7}{createWorkerThread}}();}
+\DoxyCodeLine{95             \textcolor{keywordtype}{void} \mbox{\hyperlink{classnodesynth_1_1NodeGraph_a89965120cdd13610eeccb3394588a137}{destroyWorkerThread}}();}
+\DoxyCodeLine{96             \textcolor{comment}{// Data streams}}
+\DoxyCodeLine{97             \mbox{\hyperlink{classnodesynth_1_1MidiStream}{MidiStream}} * eventsIn;}
+\DoxyCodeLine{98             \mbox{\hyperlink{classnodesynth_1_1AudioDataStream}{AudioDataStream}} * audioOutLeft;}
+\DoxyCodeLine{99             \mbox{\hyperlink{classnodesynth_1_1AudioDataStream}{AudioDataStream}} * audioOutRight;}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101             \textcolor{comment}{// Output data streams}}
+\DoxyCodeLine{102             \mbox{\hyperlink{classnodesynth_1_1TimeDomainAudioStream}{TimeDomainAudioStream}} * audioOutLeftTime;}
+\DoxyCodeLine{103             \mbox{\hyperlink{classnodesynth_1_1TimeDomainAudioStream}{TimeDomainAudioStream}} * audioOutRightTime;}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105         \textcolor{keyword}{protected}:}
+\DoxyCodeLine{109             \textcolor{keywordtype}{void} \mbox{\hyperlink{classnodesynth_1_1NodeGraph_a5193f6f51ffc326c274571be208d5cfc}{updateAllBuffers}}();}
+\DoxyCodeLine{115             \textcolor{keywordtype}{void} \mbox{\hyperlink{classnodesynth_1_1NodeGraph_a08ea95929c709210fc51121b15fba46c}{findLeafs}}(\mbox{\hyperlink{classnodesynth_1_1Node}{Node}} * root);}
+\DoxyCodeLine{116         \textcolor{keyword}{private}:}
+\DoxyCodeLine{117             std::unordered\_map<std::string, std::shared\_ptr<Node>> graphMap;}
+\DoxyCodeLine{118             std::shared\_ptr<std::thread> workerThread;}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120             fftw\_plan pLeft, pRight;}
+\DoxyCodeLine{121             std::vector<Node *> roots;}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123     \};}
+\DoxyCodeLine{124 \}}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// NODEGRAPH\_H\_INCLUDED}}
+
+\end{DoxyCode}

@@ -1,0 +1,38 @@
+\hypertarget{messages_8h_source}{}\doxysection{messages.\+h}
+\label{messages_8h_source}\index{src/core/cli/messages.h@{src/core/cli/messages.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MESSAGES\_H\_INCLUDED}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MESSAGES\_H\_INCLUDED}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string>}   \textcolor{comment}{// For all functions}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <cstdint>}  \textcolor{comment}{// For uint8\_t}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <fstream>}  \textcolor{comment}{// For log file}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <iostream>} \textcolor{comment}{// For log file operator overloading}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <memory>}   \textcolor{comment}{// For std::shared\_ptr}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacenodesynth}{nodesynth}} \{}
+\DoxyCodeLine{18     \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacenodesynth_a410d7df106396e130e26fdb7a31f3f98}{good}}(std::string msg);}
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacenodesynth_a3f5c79705dfd81d8956e3002e1d1e2c9}{neutral}}(std::string msg);}
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacenodesynth_a784619fc491f3144966f1dcd7aace826}{info}}(std::string msg);}
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacenodesynth_a32569a2ed39bcb08e268c80ef901e199}{warning}}(std::string msg);}
+\DoxyCodeLine{50     \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacenodesynth_ad0ab851f214aa06cf803dae05019f4aa}{error}}(std::string msg);}
+\DoxyCodeLine{60     \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacenodesynth_a5cc6e53399f431b12ccb1969f4388bcc}{errorExit}}(std::string msg, uint8\_t exitCode = 1);}
+\DoxyCodeLine{70     \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacenodesynth_adfa5c6219768df023d9c8096adca373c}{debug}}(std::string msg);}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72     \textcolor{keyword}{class }\mbox{\hyperlink{classnodesynth_1_1LogFile}{LogFile}} \{}
+\DoxyCodeLine{73     \textcolor{keyword}{public}:}
+\DoxyCodeLine{74         \mbox{\hyperlink{classnodesynth_1_1LogFile}{LogFile}}();}
+\DoxyCodeLine{75         \mbox{\hyperlink{classnodesynth_1_1LogFile}{\string~LogFile}}();}
+\DoxyCodeLine{76         \textcolor{keywordtype}{void} initializeLog(std::string filename);}
+\DoxyCodeLine{77         \textcolor{keyword}{const} \textcolor{keywordtype}{bool} hasLogFile();}
+\DoxyCodeLine{78         std::shared\_ptr<std::ofstream> getLogFile();}
+\DoxyCodeLine{79     \textcolor{keyword}{private}:}
+\DoxyCodeLine{80         std::shared\_ptr<std::ofstream> logFile;}
+\DoxyCodeLine{81     \};}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83 \} \textcolor{comment}{// namespace nodesynth}}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// MESSAGES\_H\_INCLUDED}}
+
+\end{DoxyCode}

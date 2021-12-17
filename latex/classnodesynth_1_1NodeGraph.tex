@@ -1,0 +1,194 @@
+\hypertarget{classnodesynth_1_1NodeGraph}{}\doxysection{nodesynth\+::Node\+Graph Class Reference}
+\label{classnodesynth_1_1NodeGraph}\index{nodesynth::NodeGraph@{nodesynth::NodeGraph}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classnodesynth_1_1Node}{Node}} $>$ \mbox{\hyperlink{classnodesynth_1_1NodeGraph_a818549e35172c93f621687d44c5ea408}{get\+Node\+By\+Name}} (std\+::string name)
+\item 
+void \mbox{\hyperlink{classnodesynth_1_1NodeGraph_a63e99ee713f9725060261a4e2474acdf}{insert\+Node}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classnodesynth_1_1Node}{Node}} $>$ node)
+\item 
+void \mbox{\hyperlink{classnodesynth_1_1NodeGraph_a819d8167438be68d208bbae2ec4218d2}{insert\+Node}} (\mbox{\hyperlink{classnodesynth_1_1Node}{Node}} $\ast$node)
+\item 
+void \mbox{\hyperlink{classnodesynth_1_1NodeGraph_ae21dfbd09a4173e709de46d892356d9d}{clear\+Graph}} ()
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classnodesynth_1_1Node}{Node}} $>$ $>$ \mbox{\hyperlink{classnodesynth_1_1NodeGraph_aea7c7b6fcad3188642f089ea25a513af}{clear\+Without\+Deleting}} ()
+\item 
+bool \mbox{\hyperlink{classnodesynth_1_1NodeGraph_ad02acb3e1434d16c2064f2d74ec8b01f}{connect\+Ports}} (std\+::string from\+Node\+Id, std\+::string from\+Node\+Port\+Id, std\+::string to\+Node\+Id, std\+::string to\+Node\+Port\+Id)
+\item 
+void \mbox{\hyperlink{classnodesynth_1_1NodeGraph_ae2ee8be1257c4526e9a4273d9754f7aa}{connect\+To\+Left\+Output}} (\mbox{\hyperlink{classnodesynth_1_1AudioDataStream}{Audio\+Data\+Stream}} $\ast$left)
+\item 
+void \mbox{\hyperlink{classnodesynth_1_1NodeGraph_acb3710cf73455c878549e3aa45c1f85f}{connect\+To\+Right\+Output}} (\mbox{\hyperlink{classnodesynth_1_1AudioDataStream}{Audio\+Data\+Stream}} $\ast$right)
+\item 
+void \mbox{\hyperlink{classnodesynth_1_1NodeGraph_ab9b17454b2780bf4dab6428f45ad82a7}{create\+Worker\+Thread}} ()
+\item 
+void \mbox{\hyperlink{classnodesynth_1_1NodeGraph_a89965120cdd13610eeccb3394588a137}{destroy\+Worker\+Thread}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnodesynth_1_1NodeGraph_a91640078acc310bd1828e7d8c73ee1cf}\label{classnodesynth_1_1NodeGraph_a91640078acc310bd1828e7d8c73ee1cf}} 
+\mbox{\hyperlink{classnodesynth_1_1MidiStream}{Midi\+Stream}} $\ast$ {\bfseries events\+In}
+\item 
+\mbox{\Hypertarget{classnodesynth_1_1NodeGraph_a156b5f34952c73eab8e7263f278c7cb8}\label{classnodesynth_1_1NodeGraph_a156b5f34952c73eab8e7263f278c7cb8}} 
+\mbox{\hyperlink{classnodesynth_1_1AudioDataStream}{Audio\+Data\+Stream}} $\ast$ {\bfseries audio\+Out\+Left}
+\item 
+\mbox{\Hypertarget{classnodesynth_1_1NodeGraph_ae9b00027ef2442e204bcf45191ace7b5}\label{classnodesynth_1_1NodeGraph_ae9b00027ef2442e204bcf45191ace7b5}} 
+\mbox{\hyperlink{classnodesynth_1_1AudioDataStream}{Audio\+Data\+Stream}} $\ast$ {\bfseries audio\+Out\+Right}
+\item 
+\mbox{\Hypertarget{classnodesynth_1_1NodeGraph_a54c3b605d58e190f7854197fde080798}\label{classnodesynth_1_1NodeGraph_a54c3b605d58e190f7854197fde080798}} 
+\mbox{\hyperlink{classnodesynth_1_1TimeDomainAudioStream}{Time\+Domain\+Audio\+Stream}} $\ast$ {\bfseries audio\+Out\+Left\+Time}
+\item 
+\mbox{\Hypertarget{classnodesynth_1_1NodeGraph_ab4c12a07b33d1e09681d3ab8d6d344ad}\label{classnodesynth_1_1NodeGraph_ab4c12a07b33d1e09681d3ab8d6d344ad}} 
+\mbox{\hyperlink{classnodesynth_1_1TimeDomainAudioStream}{Time\+Domain\+Audio\+Stream}} $\ast$ {\bfseries audio\+Out\+Right\+Time}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classnodesynth_1_1NodeGraph_a5193f6f51ffc326c274571be208d5cfc}{update\+All\+Buffers}} ()
+\item 
+void \mbox{\hyperlink{classnodesynth_1_1NodeGraph_a08ea95929c709210fc51121b15fba46c}{find\+Leafs}} (\mbox{\hyperlink{classnodesynth_1_1Node}{Node}} $\ast$root)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classnodesynth_1_1NodeGraph_ae21dfbd09a4173e709de46d892356d9d}\label{classnodesynth_1_1NodeGraph_ae21dfbd09a4173e709de46d892356d9d}} 
+\index{nodesynth::NodeGraph@{nodesynth::NodeGraph}!clearGraph@{clearGraph}}
+\index{clearGraph@{clearGraph}!nodesynth::NodeGraph@{nodesynth::NodeGraph}}
+\doxysubsubsection{\texorpdfstring{clearGraph()}{clearGraph()}}
+{\footnotesize\ttfamily void Node\+Graph\+::clear\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clears all nodes in the graph \mbox{\Hypertarget{classnodesynth_1_1NodeGraph_aea7c7b6fcad3188642f089ea25a513af}\label{classnodesynth_1_1NodeGraph_aea7c7b6fcad3188642f089ea25a513af}} 
+\index{nodesynth::NodeGraph@{nodesynth::NodeGraph}!clearWithoutDeleting@{clearWithoutDeleting}}
+\index{clearWithoutDeleting@{clearWithoutDeleting}!nodesynth::NodeGraph@{nodesynth::NodeGraph}}
+\doxysubsubsection{\texorpdfstring{clearWithoutDeleting()}{clearWithoutDeleting()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classnodesynth_1_1Node}{Node}} $>$ $>$ Node\+Graph\+::clear\+Without\+Deleting (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clears all nodes in the graph without deleting them.
+
+\begin{DoxyReturn}{Returns}
+a linked list (in no particular order) of all nodes in the graph 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnodesynth_1_1NodeGraph_ad02acb3e1434d16c2064f2d74ec8b01f}\label{classnodesynth_1_1NodeGraph_ad02acb3e1434d16c2064f2d74ec8b01f}} 
+\index{nodesynth::NodeGraph@{nodesynth::NodeGraph}!connectPorts@{connectPorts}}
+\index{connectPorts@{connectPorts}!nodesynth::NodeGraph@{nodesynth::NodeGraph}}
+\doxysubsubsection{\texorpdfstring{connectPorts()}{connectPorts()}}
+{\footnotesize\ttfamily bool Node\+Graph\+::connect\+Ports (\begin{DoxyParamCaption}\item[{std\+::string}]{from\+Node\+Id,  }\item[{std\+::string}]{from\+Node\+Port\+Id,  }\item[{std\+::string}]{to\+Node\+Id,  }\item[{std\+::string}]{to\+Node\+Port\+Id }\end{DoxyParamCaption})}
+
+Connects ports from two nodes in the graph.
+
+
+\begin{DoxyParams}{Parameters}
+{\em from\+Node\+Id} & Id of the \char`\"{}from\char`\"{} node \\
+\hline
+{\em from\+Node\+Port\+Id} & The Id of the output port within the from node to connect \\
+\hline
+{\em to\+Node\+Id} & Id of the \char`\"{}to\char`\"{} node \\
+\hline
+{\em to\+Node\+Port\+Id} & The id of the input port within the node to connect to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classnodesynth_1_1NodeGraph_ae2ee8be1257c4526e9a4273d9754f7aa}\label{classnodesynth_1_1NodeGraph_ae2ee8be1257c4526e9a4273d9754f7aa}} 
+\index{nodesynth::NodeGraph@{nodesynth::NodeGraph}!connectToLeftOutput@{connectToLeftOutput}}
+\index{connectToLeftOutput@{connectToLeftOutput}!nodesynth::NodeGraph@{nodesynth::NodeGraph}}
+\doxysubsubsection{\texorpdfstring{connectToLeftOutput()}{connectToLeftOutput()}}
+{\footnotesize\ttfamily void Node\+Graph\+::connect\+To\+Left\+Output (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnodesynth_1_1AudioDataStream}{Audio\+Data\+Stream}} $\ast$}]{left }\end{DoxyParamCaption})}
+
+connects a data stream to the left output
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & the audio stream to connect \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classnodesynth_1_1NodeGraph_acb3710cf73455c878549e3aa45c1f85f}\label{classnodesynth_1_1NodeGraph_acb3710cf73455c878549e3aa45c1f85f}} 
+\index{nodesynth::NodeGraph@{nodesynth::NodeGraph}!connectToRightOutput@{connectToRightOutput}}
+\index{connectToRightOutput@{connectToRightOutput}!nodesynth::NodeGraph@{nodesynth::NodeGraph}}
+\doxysubsubsection{\texorpdfstring{connectToRightOutput()}{connectToRightOutput()}}
+{\footnotesize\ttfamily void Node\+Graph\+::connect\+To\+Right\+Output (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnodesynth_1_1AudioDataStream}{Audio\+Data\+Stream}} $\ast$}]{right }\end{DoxyParamCaption})}
+
+connects a data stream to the right output
+
+
+\begin{DoxyParams}{Parameters}
+{\em right} & the audio stream to connect \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classnodesynth_1_1NodeGraph_ab9b17454b2780bf4dab6428f45ad82a7}\label{classnodesynth_1_1NodeGraph_ab9b17454b2780bf4dab6428f45ad82a7}} 
+\index{nodesynth::NodeGraph@{nodesynth::NodeGraph}!createWorkerThread@{createWorkerThread}}
+\index{createWorkerThread@{createWorkerThread}!nodesynth::NodeGraph@{nodesynth::NodeGraph}}
+\doxysubsubsection{\texorpdfstring{createWorkerThread()}{createWorkerThread()}}
+{\footnotesize\ttfamily void Node\+Graph\+::create\+Worker\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Creates the worker thread. \mbox{\Hypertarget{classnodesynth_1_1NodeGraph_a89965120cdd13610eeccb3394588a137}\label{classnodesynth_1_1NodeGraph_a89965120cdd13610eeccb3394588a137}} 
+\index{nodesynth::NodeGraph@{nodesynth::NodeGraph}!destroyWorkerThread@{destroyWorkerThread}}
+\index{destroyWorkerThread@{destroyWorkerThread}!nodesynth::NodeGraph@{nodesynth::NodeGraph}}
+\doxysubsubsection{\texorpdfstring{destroyWorkerThread()}{destroyWorkerThread()}}
+{\footnotesize\ttfamily void Node\+Graph\+::destroy\+Worker\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destroys the worker thread \mbox{\Hypertarget{classnodesynth_1_1NodeGraph_a08ea95929c709210fc51121b15fba46c}\label{classnodesynth_1_1NodeGraph_a08ea95929c709210fc51121b15fba46c}} 
+\index{nodesynth::NodeGraph@{nodesynth::NodeGraph}!findLeafs@{findLeafs}}
+\index{findLeafs@{findLeafs}!nodesynth::NodeGraph@{nodesynth::NodeGraph}}
+\doxysubsubsection{\texorpdfstring{findLeafs()}{findLeafs()}}
+{\footnotesize\ttfamily void Node\+Graph\+::find\+Leafs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnodesynth_1_1Node}{Node}} $\ast$}]{root }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Traverses the node graph to find the leaf nodes
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & The root to traverse \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classnodesynth_1_1NodeGraph_a818549e35172c93f621687d44c5ea408}\label{classnodesynth_1_1NodeGraph_a818549e35172c93f621687d44c5ea408}} 
+\index{nodesynth::NodeGraph@{nodesynth::NodeGraph}!getNodeByName@{getNodeByName}}
+\index{getNodeByName@{getNodeByName}!nodesynth::NodeGraph@{nodesynth::NodeGraph}}
+\doxysubsubsection{\texorpdfstring{getNodeByName()}{getNodeByName()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classnodesynth_1_1Node}{Node}} $>$ Node\+Graph\+::get\+Node\+By\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+Gets a pointer to a node, given the node\textquotesingle{}s name. Returns null if node with that name does not exist.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the node to get. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to node with that name or nullptr if not. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnodesynth_1_1NodeGraph_a819d8167438be68d208bbae2ec4218d2}\label{classnodesynth_1_1NodeGraph_a819d8167438be68d208bbae2ec4218d2}} 
+\index{nodesynth::NodeGraph@{nodesynth::NodeGraph}!insertNode@{insertNode}}
+\index{insertNode@{insertNode}!nodesynth::NodeGraph@{nodesynth::NodeGraph}}
+\doxysubsubsection{\texorpdfstring{insertNode()}{insertNode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Node\+Graph\+::insert\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnodesynth_1_1Node}{Node}} $\ast$}]{node }\end{DoxyParamCaption})}
+
+Inserts a node into the node graph and makes it a shared pointer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The node to insert \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classnodesynth_1_1NodeGraph_a63e99ee713f9725060261a4e2474acdf}\label{classnodesynth_1_1NodeGraph_a63e99ee713f9725060261a4e2474acdf}} 
+\index{nodesynth::NodeGraph@{nodesynth::NodeGraph}!insertNode@{insertNode}}
+\index{insertNode@{insertNode}!nodesynth::NodeGraph@{nodesynth::NodeGraph}}
+\doxysubsubsection{\texorpdfstring{insertNode()}{insertNode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Node\+Graph\+::insert\+Node (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classnodesynth_1_1Node}{Node}} $>$}]{node }\end{DoxyParamCaption})}
+
+Inserts a node into the node graph
+
+
+\begin{DoxyParams}{Parameters}
+{\em node} & The node to insert \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classnodesynth_1_1NodeGraph_a5193f6f51ffc326c274571be208d5cfc}\label{classnodesynth_1_1NodeGraph_a5193f6f51ffc326c274571be208d5cfc}} 
+\index{nodesynth::NodeGraph@{nodesynth::NodeGraph}!updateAllBuffers@{updateAllBuffers}}
+\index{updateAllBuffers@{updateAllBuffers}!nodesynth::NodeGraph@{nodesynth::NodeGraph}}
+\doxysubsubsection{\texorpdfstring{updateAllBuffers()}{updateAllBuffers()}}
+{\footnotesize\ttfamily void Node\+Graph\+::update\+All\+Buffers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Updates all buffers in the node graph 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/core/Node\+Graph.\+h\item 
+src/core/Node\+Graph.\+cpp\end{DoxyCompactItemize}

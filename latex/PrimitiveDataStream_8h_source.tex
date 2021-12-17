@@ -1,0 +1,30 @@
+\hypertarget{PrimitiveDataStream_8h_source}{}\doxysection{Primitive\+Data\+Stream.\+h}
+\label{PrimitiveDataStream_8h_source}\index{src/datastream/PrimitiveDataStream.h@{src/datastream/PrimitiveDataStream.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#ifndef PRIMITIVE\_DATA\_STREAM\_H\_INCLUDED}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#define PRIMITIVE\_DATA\_STREAM\_H\_INCLUDED}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}DataStream.h"{}}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacenodesynth}{nodesynth}} \{}
+\DoxyCodeLine{19     \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{20     \textcolor{keyword}{class }\mbox{\hyperlink{classnodesynth_1_1PrimitiveDataStream}{PrimitiveDataStream}} : \mbox{\hyperlink{classnodesynth_1_1DataStream}{DataStream}} \{}
+\DoxyCodeLine{21     \textcolor{keyword}{public}:}
+\DoxyCodeLine{22         \mbox{\hyperlink{classnodesynth_1_1PrimitiveDataStream}{PrimitiveDataStream}}(\textcolor{keyword}{const} std::string name);}
+\DoxyCodeLine{23         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} updateNext();}
+\DoxyCodeLine{24         \textcolor{keywordtype}{bool} wasUpdated();}
+\DoxyCodeLine{25         T getValueThisCycle();}
+\DoxyCodeLine{26         \textcolor{keywordtype}{void} setValueThisCycle(T value);}
+\DoxyCodeLine{27     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{28     \textcolor{keyword}{private}:}
+\DoxyCodeLine{29         T valueThisCycle;}
+\DoxyCodeLine{30         \textcolor{keywordtype}{bool} updated;}
+\DoxyCodeLine{31     \};}
+\DoxyCodeLine{32 \} \textcolor{comment}{// namespace nodesynth}}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// PRIMITIVE\_DATA\_STREAM\_H\_INCLUDED}}
+
+\end{DoxyCode}
